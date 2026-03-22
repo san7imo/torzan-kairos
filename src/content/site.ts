@@ -74,7 +74,7 @@ export const pageHeroes: Record<'story' | 'contact', PageHeroContent> = {
 
 export const mainNavigation: NavItem[] = [
   { label: 'Inicio', href: '/' },
-  { label: 'Historia', href: '/historia' },
+  { label: 'El alma', href: '/historia' },
   { label: 'Contacto', href: '/contacto' },
 ];
 
