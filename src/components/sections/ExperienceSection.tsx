@@ -1,6 +1,7 @@
 import { experiencePoints } from '../../content/site';
+import { experienceAssets } from '../../data/media';
 import { Reveal } from '../common/Reveal';
-import { PlaceholderMedia } from '../ui/PlaceholderMedia';
+import { ImagePanel } from '../ui/ImagePanel';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
 
@@ -11,8 +12,8 @@ export function ExperienceSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Experiencia Torzan Kairos"
-            title="La formación se comunica como una transformación profesional, no como un simple listado de cursos."
-            description="El sitio deja espacio para mostrar ambiente, acompañamiento y proyección laboral desde una composición visual sobria."
+            title="Aprender aquí es desarrollar técnica, criterio y confianza dentro de un acompañamiento cercano."
+            description="La experiencia reúne práctica guiada, sensibilidad estética y una mirada profesional aplicada al trabajo real."
             invert
           />
           <div className="mt-10 space-y-5">
@@ -29,23 +30,29 @@ export function ExperienceSection() {
 
         <Reveal delay={0.12}>
           <div className="grid gap-5 sm:grid-cols-2">
-            <PlaceholderMedia
-              accent="frame"
+            <ImagePanel
+              alt={experienceAssets[0].alt}
               className="min-h-[260px] sm:col-span-2"
-              label="Escena editorial"
-              title="Composición preparada para mostrar clases, procesos y ambiente"
+              imgClassName="object-cover object-center"
+              label={experienceAssets[0].label}
+              src={experienceAssets[0].src}
+              title={experienceAssets[0].title}
             />
-            <PlaceholderMedia
-              accent="geometric"
+            <ImagePanel
+              alt={experienceAssets[1].alt}
               className="min-h-[220px]"
-              label="Imagen referencial"
-              title="Acompañamiento"
+              imgClassName="object-cover object-center"
+              label={experienceAssets[1].label}
+              src={experienceAssets[1].src}
+              title={experienceAssets[1].title}
             />
-            <PlaceholderMedia
-              accent="grid"
+            <ImagePanel
+              alt={experienceAssets[2].alt}
               className="min-h-[220px]"
-              label="Próximamente"
-              title="Proyección"
+              imgClassName="object-cover object-center"
+              label={experienceAssets[2].label}
+              src={experienceAssets[2].src}
+              title={experienceAssets[2].title}
             />
           </div>
         </Reveal>

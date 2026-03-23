@@ -1,6 +1,7 @@
 import { ArrowUpRight, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import { footerContact, mainNavigation } from '../../content/site';
+import { footerContact } from '../../data/contact';
+import { mainNavigation } from '../../content/site';
 import { BrandMark } from '../common/BrandMark';
 import { Container } from '../ui/Container';
 
@@ -14,15 +15,12 @@ export function SiteFooter() {
             <div>
               <BrandMark />
               <p className="mt-6 max-w-md text-sm leading-8 text-mist/70">
-                Formación profesional en belleza e imagen personal con una propuesta editorial,
-                sobria y lista para sustituir placeholders por contenido final sin rehacer la base.
+                Formación profesional y servicios de belleza dentro de una misma propuesta de marca, preparados para crecer con contenido real sin rehacer la base visual.
               </p>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">
-                Navegación
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">Navegación</p>
               <div className="mt-5 flex flex-col gap-3">
                 {mainNavigation.map((item) => (
                   <NavLink
@@ -38,9 +36,7 @@ export function SiteFooter() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">
-                Contacto provisional
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">Contacto editable</p>
               <div className="mt-5 space-y-4 text-sm text-mist/72">
                 <p className="flex gap-3">
                   <Mail size={16} className="mt-1 shrink-0 text-accent-gold" />
@@ -55,9 +51,7 @@ export function SiteFooter() {
                   <span>{footerContact.location}</span>
                 </p>
                 <div className="pt-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-mist/44">
-                    Redes en actualización
-                  </p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-mist/44">Redes en actualización</p>
                   <div className="mt-3 flex gap-3">
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/4 transition duration-300 hover:border-accent-gold/32 hover:text-accent-gold">
                       <Instagram size={16} />
@@ -72,8 +66,7 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-12 border-t border-white/8 pt-6 text-[0.68rem] uppercase tracking-[0.22em] text-mist/40">
-            © {new Date().getFullYear()} Torzan Kairos Academia. Base visual preparada para
-            reemplazo de activos, datos operativos y material institucional final.
+            © {new Date().getFullYear()} Torzan Kairos. Base visual preparada para cursos, servicios, activos reales, datos operativos y despliegue comercial final.
           </div>
         </div>
       </Container>

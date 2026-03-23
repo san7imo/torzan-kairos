@@ -1,11 +1,26 @@
-import { Mail, MapPin, MessageCircle, Phone, Send, TimerReset } from 'lucide-react';
-import { contactPageHighlights, contactQuickDetails } from '../../content/site';
+import { Mail, MapPin, MessageCircleMore, Phone, Send, TimerReset } from 'lucide-react';
+import {
+  contactFormFields,
+  contactFormNote,
+  contactPageHighlights,
+  contactQuickDetails,
+} from '../../data/contact';
+import { whatsappMessages } from '../../data/whatsapp';
+import type { ContactDetailKind } from '../../types/site';
 import { Reveal } from '../common/Reveal';
+import { ContactDetailCard } from '../ui/ContactDetailCard';
 import { Button } from '../ui/Button';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
+import { WhatsAppCTA } from '../ui/WhatsAppCTA';
 
-const detailIcons = [Phone, Mail, MapPin, TimerReset];
+const detailIcons: Record<ContactDetailKind, typeof Phone> = {
+  whatsapp: MessageCircleMore,
+  phone: Phone,
+  email: Mail,
+  location: MapPin,
+  hours: TimerReset,
+};
 
 export function ContactChannelsSection() {
   return (
@@ -15,43 +30,31 @@ export function ContactChannelsSection() {
           <div className="rounded-[2rem] border border-brand-blue/10 bg-brand-blue p-7 text-mist shadow-[0_24px_70px_rgba(20,47,74,0.16)]">
             <SectionHeading
               eyebrow="Contacto rápido"
-              title="Canales visibles, editables y listos para reemplazar por datos reales."
-              description="Los textos actuales son placeholders controlados para no inventar información operativa todavía no confirmada."
+              title="Canales directos para cursos, reservas y orientación personalizada."
+              description="WhatsApp, teléfono, correo, dirección y horario se presentan en un bloque claro para facilitar el siguiente paso."
               invert
             />
 
-            <ul className="mt-8 grid gap-4" aria-label="Canales de contacto provisionales">
+            <ul className="mt-8 grid gap-4" aria-label="Canales de contacto">
               {contactQuickDetails.map((detail, index) => {
-                const Icon = detailIcons[index];
+                const Icon = detailIcons[detail.kind ?? 'phone'];
 
                 return (
-                  <li
-                    key={detail.label}
-                    className="rounded-[1.6rem] border border-white/10 bg-white/5 p-5 list-none"
-                  >
-                    <div className="flex items-start gap-4">
-                      <span className="mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent-gold/28 bg-accent-gold/10 text-accent-gold">
-                        <Icon size={18} />
-                      </span>
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-gold">
-                          {detail.label}
-                        </p>
-                        <p className="mt-2 text-sm leading-7 text-mist">{detail.value}</p>
-                        <p className="mt-2 text-xs uppercase tracking-[0.14em] text-mist/46">
-                          {detail.note}
-                        </p>
-                      </div>
-                    </div>
+                  <li key={detail.label} className="list-none">
+                    <Reveal delay={index * 0.05}>
+                      <ContactDetailCard detail={detail} icon={Icon} tone="dark" />
+                    </Reveal>
                   </li>
                 );
               })}
             </ul>
 
-            <Button className="mt-8 w-full sm:w-auto" href="#" variant="primary">
-              <MessageCircle size={16} />
-              WhatsApp placeholder
-            </Button>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppCTA className="w-full sm:w-auto" label="Escribir por WhatsApp" message={whatsappMessages.contactBooking} />
+              <Button className="w-full sm:w-auto" to="/servicios" variant="secondary">
+                Ver servicios
+              </Button>
+            </div>
           </div>
         </Reveal>
 
@@ -59,73 +62,42 @@ export function ContactChannelsSection() {
           <div className="rounded-[2rem] border border-brand-blue/10 bg-white p-7 shadow-[0_18px_60px_rgba(20,47,74,0.08)]">
             <SectionHeading
               eyebrow="Formulario"
-              title="Formulario visual listo para integrarse con backend más adelante."
-              description="La estructura ya contempla los campos comerciales básicos sin amarrarse todavía a un servicio externo."
+              title="Déjanos tus datos y cuéntanos cómo podemos ayudarte."
+              description="La estructura ya contempla la información esencial para orientar matrícula, reserva o solicitud de información."
             />
 
             <form className="mt-8 grid gap-4 sm:grid-cols-2" aria-describedby="contact-form-note">
-              <label htmlFor="contact-name">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue/72">
-                  Nombre
-                </span>
-                <input
-                  id="contact-name"
-                  name="name"
-                  className="w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
-                  placeholder="Nombre completo"
-                  type="text"
-                />
-              </label>
-              <label htmlFor="contact-email">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue/72">
-                  Correo
-                </span>
-                <input
-                  id="contact-email"
-                  name="email"
-                  className="w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
-                  placeholder="correo@ejemplo.com"
-                  type="email"
-                />
-              </label>
-              <label htmlFor="contact-phone">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue/72">
-                  Teléfono
-                </span>
-                <input
-                  id="contact-phone"
-                  name="phone"
-                  className="w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
-                  placeholder="Número de contacto"
-                  type="tel"
-                />
-              </label>
-              <label htmlFor="contact-subject">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue/72">
-                  Asunto
-                </span>
-                <input
-                  id="contact-subject"
-                  name="subject"
-                  className="w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
-                  placeholder="Tema de interés"
-                  type="text"
-                />
-              </label>
-              <label className="sm:col-span-2" htmlFor="contact-message">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue/72">
-                  Mensaje
-                </span>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  className="min-h-40 w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
-                  placeholder="Cuéntanos qué información te gustaría recibir"
-                />
-              </label>
+              {contactFormFields.map((field) => (
+                <label
+                  key={field.id}
+                  className={field.colSpan === 2 ? 'sm:col-span-2' : undefined}
+                  htmlFor={field.id}
+                >
+                  <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue/72">
+                    {field.label}
+                  </span>
+                  {field.type === 'textarea' ? (
+                    <textarea
+                      id={field.id}
+                      name={field.name}
+                      rows={field.rows}
+                      className="min-h-40 w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
+                      placeholder={field.placeholder}
+                    />
+                  ) : (
+                    <input
+                      id={field.id}
+                      name={field.name}
+                      className="w-full rounded-2xl border border-brand-blue/12 bg-mist/35 px-4 py-3 text-brand-blue placeholder:text-brand-blue/36"
+                      placeholder={field.placeholder}
+                      type={field.type}
+                    />
+                  )}
+                </label>
+              ))}
               <div className="sm:col-span-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <p id="contact-form-note" className="text-xs uppercase tracking-[0.14em] text-brand-blue/48">
-                  Placeholder listo para conectar con validación y envío reales.
+                  {contactFormNote}
                 </p>
                 <Button type="button" variant="primary">
                   <Send size={16} />
@@ -137,7 +109,7 @@ export function ContactChannelsSection() {
             <ul className="mt-8 grid gap-3 md:grid-cols-3" aria-label="Puntos clave del bloque de contacto">
               {contactPageHighlights.map((item, index) => (
                 <Reveal key={item} delay={index * 0.06}>
-                  <li className="rounded-[1.4rem] border border-brand-blue/10 bg-mist/35 px-4 py-4 text-sm leading-7 text-brand-blue/72 list-none">
+                  <li className="list-none rounded-[1.4rem] border border-brand-blue/10 bg-mist/35 px-4 py-4 text-sm leading-7 text-brand-blue/72">
                     {item}
                   </li>
                 </Reveal>

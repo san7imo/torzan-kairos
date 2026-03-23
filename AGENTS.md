@@ -1,548 +1,821 @@
-# AGENTS.md — Torzan Kairos Landing
+# AGENTS.md — Torzan Kairos Web
 
-## 1. Contexto del proyecto
+## 1. Propósito de este archivo
 
-Este proyecto consiste en el desarrollo de un sitio web tipo landing / marketing site para **Torzan Kairos Academia**, construido con **React + TypeScript + Tailwind CSS v4+**.
+Este documento es la **fuente de verdad operativa para Codex** durante el desarrollo del sitio web de **Torzan Kairos**. Antes de ejecutar cualquier hito, Codex debe leer este archivo y respetarlo.
 
-Aunque se le llama “landing”, funcionalmente debe comportarse como un **sitio promocional multipágina, ligero y moderno**, con enfoque en captación, posicionamiento de marca y presentación institucional.
+La prioridad no es solo “hacer pantallas bonitas”, sino construir una web coherente con la marca, escalable y lista para evolucionar a medida que lleguen más assets, fotos y validaciones del cliente.
 
-La marca debe transmitir:
-- elegancia
-- formación profesional
-- lujo sobrio
-- precisión técnica
-- cercanía humana
-- confianza y trayectoria
+---
 
-El diseño debe sentirse **premium, minimalista y contemporáneo**, evitando sobrecarga visual, bloques densos de texto sin jerarquía o animaciones invasivas.
+## 2. Resumen ejecutivo del proyecto
 
-## 2. Objetivo del sitio
+Torzan Kairos ya no debe presentarse únicamente como una academia. La marca debe comunicarse como un ecosistema de **formación profesional + servicios de belleza, estética y cuidado personal**.
+
+La web debe vender dos líneas principales de negocio:
+
+1. **Academia / Cursos**
+   - formación profesional
+   - módulos detallados
+   - matrícula / solicitud de información
+   - prestigio, técnica, metodología, historia y trayectoria
+
+2. **Servicios / Atención al público**
+   - peluquería
+   - uñas
+   - cejas, depilación y pestañas
+   - cuidado personal / spa
+   - precios visibles
+   - reserva por WhatsApp
+
+La experiencia debe sentirse **premium, clara, moderna, minimalista y comercialmente efectiva**.
+
+---
+
+## 3. Stack obligatorio
+
+- **React**
+- **TypeScript**
+- **Tailwind CSS v4+**
+- arquitectura limpia y escalable
+- componentes reutilizables
+- contenido desacoplado de la UI
+- diseño mobile-first
+
+Evitar complejidad innecesaria, dependencias pesadas o patrones difíciles de mantener.
+
+---
+
+## 4. Objetivos del sitio
 
 El sitio debe servir para:
-1. presentar a Torzan Kairos como academia profesional de belleza e imagen personal;
-2. comunicar su propuesta de valor, trayectoria, misión, visión y pilares;
-3. mostrar cursos, experiencias, espacios y metodología;
-4. ofrecer una página exclusiva para contar la historia de la fundadora / marca;
-5. facilitar el contacto comercial y la conversión;
-6. permitir mostrar avances aunque todavía falten imágenes, videos y datos finales.
 
-## 3. Estado actual del proyecto
+1. presentar la identidad de Torzan Kairos de forma profesional;
+2. comunicar historia, misión, visión, objetivos y pilares de marca;
+3. vender cursos profesionales con páginas individuales completas;
+4. vender servicios con páginas individuales por categoría;
+5. llevar tráfico a **WhatsApp** para conversión:
+   - matrícula de cursos
+   - reserva de citas
+6. mostrar imágenes reales de ejemplo aunque aún falten assets finales;
+7. quedar preparado para reemplazar contenido sin rehacer la arquitectura.
 
-Actualmente se cuenta con:
-- logotipo horizontal,
-- logotipo vertical,
-- isotipo,
-- favicon,
-- paleta cromática aprobada,
-- textos institucionales aprobados.
+---
 
-Todavía **NO** se cuenta con:
-- banco final de fotografías,
-- videos finales para fondos,
-- listado definitivo de cursos,
-- precios,
-- horarios,
-- testimonios reales,
-- galería final,
-- datos completos de contacto y ubicación operativa final,
-- formularios o integraciones finales.
+## 5. Contexto de marca aprobado
 
-Por lo tanto, la arquitectura y los componentes deben construirse de forma que permitan **placeholders limpios, escalables y fáciles de reemplazar**.
+### Base institucional
+Torzan Kairos fue fundada en **2010** por **Mariela Torres Zambrano**. La marca se presenta como una unión entre talento internacional, espíritu emprendedor, raíces en la tradición estética colombiana y trayectoria consolidada en España.
 
-## 4. Identidad visual aprobada
+### Posicionamiento
+No debe verse como una academia improvisada ni como un spa genérico. Debe proyectar:
 
-### Paleta base
-- `#212121` — carbón / fondo oscuro principal
-- `#dce2e1` — gris claro / fondo neutro y contraste suave
-- `#142f4a` — azul profundo / color institucional principal
-- `#e79c1f` — dorado / acento principal
+- trayectoria
+- formación profesional seria
+- estética cuidada
+- visión internacional
+- cercanía humana
+- prestigio y transformación
+
+### Mensajes clave de marca
+La narrativa institucional debe apoyarse en:
+
+- legado, pasión y excelencia en formación de belleza
+- técnica rigurosa + creatividad
+- transformación profesional
+- formación integral
+- bioseguridad y ética
+- maestría, creatividad, compromiso y respeto por la profesión
+
+### Misión
+Empoderar futuros artistas del sector de la imagen personal mediante una formación profesional integral, equilibrando competencias técnico-prácticas con desarrollo humano, bioseguridad y ética.
+
+### Visión
+Consolidarse como institución de referencia internacional en formación de artes estéticas, reconocida por innovación, excelencia y por formar profesionales destacados en Europa.
+
+### Objetivos institucionales
+- excelencia académica
+- desarrollo integral
+- personalización y cercanía
+- innovación técnica
+
+### Pilares / valores
+- **Maestría**
+- **Creatividad**
+- **Compromiso**
+- **Respeto por la profesión**
+
+### Perfil del equipo docente
+La marca cuenta con una narrativa docente basada en experiencia y vanguardia. Debe mencionarse un claustro de expertos con enfoque internacional, técnico y humano.
+
+---
+
+## 6. Identidad visual aprobada
+
+### Paleta oficial
+- `#212121` — carbón
+- `#dce2e1` — gris claro
+- `#142f4a` — azul profundo
+- `#e79c1f` — dorado
+
+### Uso recomendado
+- **Azul profundo**: color institucional dominante
+- **Dorado**: acentos, detalles, microinteracciones, botones destacados
+- **Carbón**: fondos premium, overlays, bloques sobrios
+- **Gris claro**: fondos suaves, contraste, respiración visual
 
 ### Reglas visuales
-- usar el **azul profundo** como color de marca dominante;
-- usar el **dorado** para acentos, detalles, botones destacados, líneas y microinteracciones;
-- usar el **carbón** para fondos premium, overlays y secciones sobrias;
-- usar el **gris claro** para contrastes, fondos alternos y respiración visual;
-- evitar colores adicionales innecesarios;
-- evitar gradientes exagerados o brillantes;
-- los fondos oscuros deben sentirse refinados, no pesados.
+- evitar colores extra innecesarios
+- evitar efectos recargados
+- evitar exceso de degradados brillantes
+- la web debe verse refinada, no saturada
+- usar suficiente aire visual
+- respetar la esencia sobria del branding actual, pero elevarla a un lenguaje más moderno
 
-## 5. Dirección de diseño
+---
 
-### Principios visuales
-- minimalismo elegante;
-- mucho espacio en blanco / aire visual;
-- tipografía con jerarquía clara;
-- bloques editoriales amplios y ordenados;
-- uso selectivo de animación;
-- apariencia premium sin caer en exceso ornamental.
+## 7. Dirección creativa global
 
 ### Sensación buscada
-El sitio debe sentirse como la unión entre:
-- academia profesional,
-- marca personal con trayectoria,
-- formación de alto nivel,
-- estética contemporánea,
-- experiencia aspiracional.
+La experiencia debe sentirse como la unión entre:
 
-### Motion / transiciones
-Las animaciones deben ser sutiles y funcionales. Prioridades:
-- fade-up / fade-in al entrar en viewport;
-- parallax suave o desplazamiento sutil en hero;
-- reveal de imágenes y bloques;
-- hover states refinados;
-- transición suave entre secciones;
-- evitar sliders agresivos, zooms excesivos o efectos que dificulten la lectura.
+- academia profesional de alto nivel
+- marca de belleza aspiracional
+- formación técnica seria
+- servicios comerciales confiables
+- estética contemporánea y minimalista
 
-La animación nunca debe competir con el contenido.
+### Diferenciación visual por tipo de página
 
-## 6. Arquitectura recomendada
+#### A. Páginas de cursos → diseño más académico
+Deben sentirse:
+- editoriales
+- estructuradas
+- rigurosas
+- informativas
+- con foco en módulos, duración, metodología y salida profesional
 
-Aunque el usuario lo llama “landing”, este proyecto debe estructurarse como un sitio pequeño de 3 páginas principales:
+Se puede usar:
+- composiciones amplias
+- grids ordenados
+- acordeones de módulos
+- bloques de contenido con jerarquía clara
+- imágenes con overlay elegante
 
-### Rutas
-1. `/` — Home
-2. `/historia` — Historia de la fundadora / historia de la academia
-3. `/contacto` — Contacto
+#### B. Páginas de servicios → diseño más comercial
+Deben sentirse:
+- directas
+- atractivas
+- aspiracionales
+- orientadas a conversión
+- con pricing visible y CTA claros
 
-### Rutas opcionales futuras
-- `/cursos`
-- `/experiencias`
-- `/galeria`
-- `/ubicacion`
+Se puede usar:
+- cards de servicios
+- tablas o listas de precios limpias
+- banners comerciales
+- botones de reserva prominentes
+- galerías más sensoriales
 
-Si todavía no existen como páginas independientes, parte de ese contenido puede vivir inicialmente dentro de Home como secciones ancla.
+### Regla central
+Aunque cursos y servicios tengan enfoques visuales distintos, **ambos deben sentirse parte de la misma marca**.
 
-## 7. Estructura de contenido recomendada
+---
 
-## Home (`/`)
-El home debe condensar lo más importante y convertir visitas en interés.
+## 8. Motion y UX
 
-### Secciones sugeridas
-1. **Hero premium**
-   - titular fuerte
-   - subtítulo breve
-   - CTA principal
-   - CTA secundario
-   - fondo con video, imagen o banner placeholder
+Las animaciones deben ser sutiles y elegantes:
 
-2. **Quiénes somos / resumen institucional**
-   - extracto breve de la historia
-   - conexión con la trayectoria internacional
-   - enlace a la página completa de historia
-
-3. **Áreas de formación**
-   - Barbería
-   - Peluquería profesional
-   - Estética
-   - Maquillaje profesional
-   - Manos y pies
-   - cada tarjeta puede usar texto temporal si aún faltan detalles finales
-
-4. **Metodología / propuesta de valor**
-   - técnica + creatividad
-   - formación integral
-   - bioseguridad y ética
-   - enfoque profesional real
-
-5. **Experiencia Torzan Kairos**
-   - ambiente de aprendizaje
-   - acompañamiento
-   - clases colectivas y personalizadas
-   - proyección laboral
-
-6. **Equipo docente destacado**
-   - cards resumidas con placeholders de foto
-   - nombre, rol, breve enfoque
-
-7. **Instalaciones / experiencia visual**
-   - grid de placeholders o banners de espacios
-   - pensado para reemplazar luego por galería real
-
-8. **Ubicación / presencia**
-   - mapa o bloque visual placeholder
-   - texto corto sobre localización y atención
-
-9. **Llamado a la acción final**
-   - contacto / inscripción / solicitar información
-
-10. **Footer**
-   - navegación
-   - contacto
-   - redes
-   - derechos
-
-## Historia (`/historia`)
-Esta página es importante y no debe sentirse como una sección secundaria. Debe tener peso narrativo y editorial.
-
-### Secciones sugeridas
-1. Hero editorial
-2. Historia de Mariela Torres Zambrano
-3. Origen de Torzan Kairos
-4. Legado Colombia + trayectoria en España
-5. Filosofía de enseñanza
-6. Misión, visión y valores
-7. Línea de tiempo o hitos de crecimiento
-8. CTA hacia contacto o cursos
-
-## Contacto (`/contacto`)
-Debe ser simple, elegante y directo.
-
-### Secciones sugeridas
-1. encabezado
-2. bloque de contacto principal
-3. formulario
-4. información de ubicación
-5. horarios o texto placeholder
-6. CTA adicional por WhatsApp
-7. mapa o bloque visual placeholder
-
-## 8. Ideas clave para enriquecer el proyecto
-
-Estas ideas ayudan a que el sitio se vea más completo aun cuando falte material real:
-
-### A. Sección “Experiencia de formación”
-No vender solo cursos. Vender una transformación.
-
-Subtemas:
-- aprendizaje práctico real,
-- acompañamiento docente,
-- desarrollo del criterio estético,
-- proyección laboral y emprendimiento.
-
-### B. Sección “Por qué Torzan Kairos”
-Con iconos o métricas placeholder.
-
-Ejemplos:
-- más de 12 años de trayectoria,
-- formación integral,
-- docentes especializados,
-- enfoque técnico y humano,
-- visión internacional.
-
-### C. Sección “Áreas que transforman talento en profesión”
-Una rejilla elegante con las disciplinas principales.
-
-### D. Sección “Espacios que inspiran”
-Aunque aún no existan fotos finales, puede diseñarse una galería placeholder de alto nivel.
-
-### E. Testimonios placeholder controlados
-No inventar testimonios reales. Usar solo bloques marcados claramente como temporales o desactivarlos hasta tener material aprobado.
-
-### F. CTA persistente
-Un botón flotante o barra discreta para WhatsApp / contacto puede ayudar a la conversión, siempre sin romper el minimalismo.
-
-## 9. Contenido aprobado a respetar
-
-La narrativa institucional aprobada incluye estos ejes:
-- academia fundada en 2010 por **Mariela Torres Zambrano**;
-- unión entre tradición estética colombiana y trayectoria consolidada en España;
-- enfoque en Barbería, Peluquería, Estética y Maquillaje Profesional;
-- misión basada en formación integral, bioseguridad, ética y desarrollo del ser;
-- visión de consolidarse como referencia internacional;
-- valores centrados en maestría, creatividad, compromiso y respeto por la profesión;
-- equipo docente con perfiles como Ramiro Rojas Perdomo, Nicolay Alfaro y Carolina Baquero. fileciteturn1file0
-
-**Importante:** no reescribir arbitrariamente la identidad verbal de la marca. Se puede adaptar la longitud de los textos para UX, pero el sentido institucional debe preservarse. fileciteturn1file0turn1file1
-
-## 10. Reglas de contenido para placeholders
-
-Mientras falte información final:
-- usar labels explícitos como `Próximamente`, `Contenido en actualización`, `Imagen referencial`, `Curso en construcción`;
-- no inventar precios;
-- no inventar duraciones exactas;
-- no inventar testimonios ni cifras no aprobadas;
-- no inventar direcciones exactas si no han sido confirmadas;
-- no inventar certificados, avales o partners.
-
-Sí se permite:
-- usar copy temporal elegante y claramente marcado;
-- usar tarjetas de cursos con texto ejemplo neutral;
-- usar bloques visuales placeholder con overlay y etiqueta.
-
-## 11. Stack técnico
-
-### Base
-- React
-- TypeScript
-- Tailwind CSS v4+
-
-### Recomendación de implementación
-Si no se ha definido el bootstrap exacto, priorizar una base limpia y mantenible. Puede ser Vite + React + TypeScript.
-
-### Librerías sugeridas
-Usar solo si aportan valor real:
-- `react-router-dom` para rutas;
-- `framer-motion` o librería de motion equivalente para transiciones suaves;
-- `lucide-react` para íconos;
-- una utilidad ligera para class merging si se necesita.
-
-Evitar dependencias pesadas si el resultado puede lograrse con CSS + Tailwind.
-
-## 12. Convenciones de desarrollo
-
-### Calidad de código
-- TypeScript estricto;
-- componentes reutilizables y pequeños;
-- props tipadas;
-- evitar componentes gigantes;
-- separar layout, sections y ui components;
-- mantener nombres semánticos;
-- mantener estilos dentro del sistema Tailwind;
-- evitar CSS suelto salvo utilidades muy justificadas.
-
-### Organización sugerida
-```txt
-src/
-  assets/
-  components/
-    layout/
-    sections/
-    ui/
-  data/
-  pages/
-  routes/
-  hooks/
-  lib/
-  styles/
-```
-
-### Componentes esperados
-- `SiteHeader`
-- `SiteFooter`
-- `HeroSection`
-- `SectionHeading`
-- `CourseGrid`
-- `StoryPreviewSection`
-- `ValuesSection`
-- `FacultySection`
-- `ExperienceSection`
-- `LocationSection`
-- `ContactForm`
-- `MediaPlaceholder`
-- `CTASection`
-
-## 13. Reglas UX/UI obligatorias
-
-- mobile first;
-- responsive impecable;
-- contraste suficiente;
-- navegación clara y limpia;
-- CTAs visibles pero no agresivos;
-- evitar exceso de texto continuo sin respiración;
-- priorizar lectura y conversión;
-- mantener consistencia de paddings, container widths y jerarquías;
-- el home debe verse sólido aunque falten assets finales.
-
-## 14. Accesibilidad mínima requerida
-
-- HTML semántico;
-- headings en orden correcto;
-- `alt` descriptivos;
-- focus states visibles;
-- contraste adecuado;
-- formularios con labels;
-- botones y enlaces correctamente diferenciados.
-
-## 15. Performance
-
-- optimizar imágenes;
-- usar placeholders ligeros mientras no existan videos finales;
-- no cargar video autoplay pesado sin fallback;
-- lazy load cuando aporte valor;
-- evitar bundles innecesarios;
-- preferir animaciones por transform/opacity.
-
-## 16. Enfoque del hero
-
-El hero es una pieza crítica. Debe comunicar prestigio, oportunidad profesional y belleza técnica.
-
-### Debe incluir
-- un titular elegante y fuerte;
-- un párrafo corto;
-- 1 CTA principal;
-- 1 CTA secundario;
-- fondo visual con overlay oscuro y lectura perfecta;
-- animación sutil de entrada.
-
-### No debe incluir
-- demasiado texto;
-- demasiados botones;
-- carruseles automáticos invasivos;
-- efectos excesivos.
-
-## 17. Guía editorial del tono
-
-El tono del sitio debe ser:
-- elegante;
-- profesional;
-- cálido, pero no informal;
-- aspiracional, pero no grandilocuente;
-- claro y directo.
+- fade-up
+- fade-in
+- reveal on scroll
+- stagger suave en grids
+- hover states refinados
+- transición suave entre rutas
 
 Evitar:
-- frases genéricas tipo “somos los mejores” sin soporte;
-- exceso de adjetivos;
-- textos demasiado comerciales;
-- clichés visuales o verbales.
+- sliders invasivos
+- zooms bruscos
+- parallax exagerado
+- animación que compita con el contenido
 
-## 18. Qué debe entregar Codex
+La UX debe priorizar:
+- claridad
+- escaneo rápido
+- conversión
+- buena legibilidad
+- navegación simple
 
-Codex debe trabajar por hitos y en cada hito entregar:
-1. código funcional;
-2. estructura limpia;
-3. componentes reutilizables;
-4. placeholders bien marcados;
-5. commits o cambios fáciles de revisar;
-6. nada de “mock data engañosa”.
+---
 
-## 19. Desarrollo por hitos
+## 9. Arquitectura definitiva del sitio
 
-## Hito 0 — Base y setup
-**Objetivo:** dejar el proyecto listo para crecer.
+### Rutas principales
+- `/` — Home
+- `/historia` — Historia / marca / fundadora
+- `/cursos` — índice de cursos
+- `/cursos/barberia`
+- `/cursos/peluqueria`
+- `/cursos/unas`
+- `/servicios` — índice de servicios
+- `/servicios/peluqueria`
+- `/servicios/unas`
+- `/servicios/cejas-y-depilacion`
+- `/servicios/cuidado-personal`
+- `/contacto`
 
-### Entregables
-- bootstrap del proyecto React + TypeScript + Tailwind v4+
-- estructura de carpetas
-- router configurado
-- layout base
-- header y footer iniciales
-- carga de logos y favicon
-- tokens base de color / spacing / containers
+### Regla de navegación
+El menú principal debe dar visibilidad clara a:
+- Inicio
+- Historia
+- Cursos
+- Servicios
+- Contacto
 
-### Definition of Done
-- el proyecto corre localmente sin errores
-- existen rutas para Home, Historia y Contacto
-- la identidad visual base está aplicada
+---
 
-## Hito 1 — Diseño sistémico y home base
-**Objetivo:** construir la primera versión sólida del Home.
+## 10. Estructura recomendada del Home
 
-### Entregables
-- hero principal
-- bloque resumen institucional
-- sección áreas de formación
-- sección propuesta de valor
-- CTA final
-- placeholders visuales elegantes
+El Home debe vender ambas líneas del negocio: academia y servicios.
 
-### Definition of Done
-- Home navegable y presentable
-- se siente como una marca premium aunque falten assets
+### Secciones obligatorias
+1. **Hero principal**
+   - titular fuerte
+   - subtítulo breve
+   - CTA doble:
+     - Ver cursos
+     - Reservar cita
+   - imagen o video de fondo elegante
 
-## Hito 2 — Página Historia
-**Objetivo:** desarrollar la narrativa de la marca y fundadora.
+2. **Resumen institucional**
+   - quiénes somos
+   - conexión entre academia y atención real
+   - enlace a Historia
 
-### Entregables
-- hero editorial de historia
-- bloques narrativos con buena jerarquía
-- misión, visión, objetivos y valores
-- timeline o composición visual de trayectoria
-- CTA a contacto
+3. **Cursos destacados**
+   - Barbería Profesional
+   - Peluquería Profesional
+   - Curso Profesional de Uñas
 
-### Definition of Done
-- la página cuenta la historia con claridad y peso visual
-- el contenido aprobado está bien representado
+4. **Servicios destacados**
+   - Peluquería
+   - Uñas
+   - Cejas / depilación / pestañas
+   - Cuidado personal / spa
 
-## Hito 3 — Página Contacto
-**Objetivo:** construir una página de contacto limpia y funcional.
+5. **Por qué Torzan Kairos**
+   - formación práctica
+   - docentes / experiencia
+   - enfoque integral
+   - servicios reales
+   - ubicación / cercanía
 
-### Entregables
-- encabezado de contacto
-- formulario visual
-- bloque de canales de contacto
-- mapa / ubicación placeholder
-- CTA por WhatsApp
+6. **Experiencia visual / galería**
+   - imágenes reales de cursos y servicios
 
-### Definition of Done
-- la página transmite confianza y claridad
-- el formulario está listo para conectar a backend más adelante
+7. **Ubicación y contacto rápido**
+   - dirección
+   - CTA WhatsApp
 
-## Hito 4 — Motion y refinamiento visual
-**Objetivo:** elevar la experiencia sin romper el minimalismo.
+8. **CTA final dividido**
+   - Quiero formarme
+   - Quiero reservar
 
-### Entregables
-- animaciones de entrada sutiles
-- reveals por sección
-- hover states refinados
-- transiciones entre páginas
-- microinteracciones consistentes
+---
 
-### Definition of Done
-- el sitio se siente moderno y premium
-- la animación no afecta rendimiento ni legibilidad
+## 11. Página Historia
 
-## Hito 5 — Responsive, accesibilidad y limpieza
-**Objetivo:** endurecer calidad.
+La página `/historia` debe tener peso editorial y no verse como una sección secundaria.
 
-### Entregables
-- revisión mobile / tablet / desktop
-- accesibilidad básica
-- revisión de contraste y focus
-- limpieza de componentes
-- revisión de textos placeholder
+### Secciones recomendadas
+- Hero editorial
+- Historia de la marca
+- Fundación en 2010
+- Mariela Torres Zambrano
+- Colombia + España
+- Misión, visión y objetivos
+- Pilares
+- Equipo docente
+- CTA hacia cursos y contacto
 
-### Definition of Done
-- experiencia consistente en todos los breakpoints
-- base lista para reemplazar contenido final
+### Tono
+- narrativo
+- institucional
+- elegante
+- emocional pero sobrio
 
-## Hito 6 — Integración de contenido real
-**Objetivo:** reemplazar placeholders por material definitivo cuando llegue.
+---
 
-### Entregables
-- reemplazo de videos / banners
-- actualización de cursos reales
-- integración de datos de contacto definitivos
-- galerías finales
-- revisión final de copy
+## 12. Cursos: lineamiento global
 
-### Definition of Done
-- sitio listo para publicación
-- sin placeholders pendientes visibles
+### Página índice `/cursos`
+Debe mostrar una visión general de los 3 programas con cards premium y CTA a sus páginas individuales.
 
-## 20. Regla de trabajo para contenido faltante
+### CTA principal de cursos
+Cada curso debe tener botón:
+- **Matricúlate ahora**
+- **Solicitar información**
 
-Si falta información, Codex debe:
-1. crear la estructura igualmente;
-2. colocar contenido temporal claramente señalado;
-3. no bloquear el avance del proyecto;
-4. dejar todo preparado para reemplazo rápido.
+Ambos deben dirigir a WhatsApp con mensaje prellenado.
 
-## 21. Prohibiciones explícitas
+### WhatsApp cursos
+Usar como base el número:
+- `652384970`
 
-Codex NO debe:
-- rediseñar la identidad de marca;
-- cambiar la paleta aprobada;
-- inventar información crítica;
-- llenar la UI con lorem ipsum genérico si puede usarse copy temporal más útil;
-- hacer un diseño recargado;
-- usar animaciones excesivas;
-- convertir el sitio en algo barroco o visualmente ruidoso.
+Formato sugerido del mensaje:
+- `Hola, quiero información sobre el curso de [NOMBRE_DEL_CURSO] de Torzan Kairos. Me gustaría conocer horarios, precio y proceso de matrícula.`
 
-## 22. Prioridad de negocio
+### Diseño de páginas de cursos
+Cada página individual debe incluir:
+- hero visual
+- resumen del curso
+- duración
+- a quién va dirigido
+- qué aprenderá el alumno
+- módulos completos
+- beneficios del programa
+- galería
+- CTA a WhatsApp
 
-La prioridad no es solo “verse bonito”. La prioridad es que el sitio:
-- comunique prestigio,
-- se pueda mostrar pronto como avance,
-- sea escalable,
-- permita cargar el contenido real después sin rehacer la base.
+---
 
-## 23. Pendientes que deberán solicitarse al cliente
+## 13. Contenido obligatorio de cursos
 
-En próximas iteraciones será necesario pedir:
-- fotos de instalaciones,
-- fotos del equipo,
-- videos cortos para hero o banners,
-- listado final de cursos,
-- duración de programas,
-- horarios,
-- certificaciones o avales confirmados,
-- testimonios aprobados,
-- redes sociales,
-- teléfonos y correos finales,
-- dirección exacta,
-- mapa / ubicación,
-- políticas o avisos legales si aplican.
+### 13.1 Curso de Barbería
+
+#### Nombre recomendado
+**Barbería Profesional**
+
+#### Duración
+**240 horas**
+
+#### Resumen base
+Curso dirigido a alumnos que desean aprender la profesión de peluquería masculina y barbería, dando respuesta a la demanda del sector. Debe comunicar técnicas de corte, peinado, barbería, color y moda masculina actual.
+
+#### Beneficios visibles en materiales recibidos
+- pagos flexibles
+- profesorado experto
+- bolsa de empleo
+
+> Si estos beneficios se muestran, debe hacerse con tono responsable. Si se requiere mayor cautela legal/comercial, mostrarlos como beneficios institucionales y no como promesa absoluta.
+
+#### Módulos obligatorios
+**Módulo 1**
+- Higiene y asepsia
+- Puesto de trabajo en barbería
+- Herramientas y productos
+- Bioseguridad
+- Tipos de afecciones
+
+**Módulo 2**
+- Técnicas de corte clásico
+- Técnicas de corte en cabello corto (fades)
+- Tipos de fade / degradados
+- Cortes modernos
+- Técnica y corte con tijera
+- Uso correcto de la navaja
+
+**Módulo 3**
+- Visagismo
+- Tipos de barbas y bigotes
+- Diseño de afeitado y perfilado
+- Rituales de afeitado
+- Cosmetología para la barba
+
+**Módulo 4**
+- Cortes con diseño
+- Freestyle
+- Técnicas old school
+- Peinado y uso correcto del secador
+- Bioseguridad
+
+**Módulo 5**
+- Cambios estructurales
+- Colorimetría
+- Carta de color
+- Decoloración
+- Tintes fantasía
+
+**Módulo 6**
+- Asesoría de imagen
+- Gestión administrativa
+- Captación del cliente
+- Emprendimiento
+
+---
+
+### 13.2 Curso de Peluquería
+
+#### Nombre recomendado
+**Peluquería Profesional**
+
+#### Duración
+**240 horas prácticas**
+
+#### Introducción / temario base
+- Origen y evolución de la peluquería
+- Herramientas de trabajo, presentación, técnicas y uso
+- Higiene: esterilización de herramientas, preparación del cliente y área de trabajo
+- Servicio al cliente
+- La piel
+- El cabello
+- Tricología del cabello
+- Normas de seguridad y prevención de accidentes
+
+#### Módulos obligatorios
+**Módulo 1 — Higiene del cabello y del cuero cabelludo**
+- Introducción a la higiene capilar
+- Cosmetología para la higiene capilar
+- Champús y acondicionadores
+- Técnicas para el cuidado, lavado y acondicionamiento capilar
+
+**Módulo 2 — Cortes de cabello**
+- Corte bob
+- Corte ovalado
+- Corte en V
+- Corte recto
+- Capas ascendentes
+- Corte 0°
+- Corte 45°
+- Corte 90°
+- Corte 135° y 180°
+- Cortes clásicos de peluquería masculina
+
+**Módulo 3 — Estructuras del cabello y recogidos**
+- Rulos
+- Ondas de agua
+- Ondas con plancha
+- Secado
+- Planchado
+- Recogidos bajos
+- Recogidos medios
+- Recogidos altos
+- Peinados con volumen
+- Peinado bob
+- Peinado con puntas hacia afuera
+
+**Módulo 4 — Colorimetría**
+- Colorimetría
+- Tinte raíz
+- Tinte directo
+- Corrección de color
+- Decoloración y coloraciones parciales del cabello
+- Numeración en colorimetría
+- Estilos de coloración y tendencias
+- Alteraciones del color
+- Limpieza de color
+- Mechas tradicionales
+- Mechas babylight
+- Mechas balayage
+- Mechas balayage V
+- Mechas balayage con falso crecimiento
+- Mechas en contorno
+
+**Módulo 5 — Tratamientos capilares**
+- Hidrataciones
+- Botox capilar
+- Queratinas
+- Alisados
+
+---
+
+### 13.3 Curso de Uñas
+
+#### Nombre recomendado
+**Curso Profesional de Uñas**
+
+#### Duración
+**240 horas prácticas**
+
+#### Introducción / temario base
+- Equipos, herramientas y productos
+- Anatomía de las uñas
+- Patologías
+- Higiene, desinfección y esterilización de herramientas
+- Manejo de químicos y prevención de alergias
+
+#### Módulos obligatorios
+**Módulo 1 — Manicura y pedicura tradicional / rusa**
+- Manicura tradicional y rusa
+- Pedicura tradicional y rusa
+- Uso correcto del torno y sus brocas
+- Esmaltado tradicional y semipermanente
+- Remoción de callos y durezas
+- Retiro de esmalte
+
+**Módulo 2 — Uñas artificiales (acrílico, gel, acrigel y soft gel)**
+- Aplicación de perlas en acrílico
+- Aplicación de acrílico con tips
+- Acrílico esculpido con molde
+- Puntas comerciales
+- Aplicación de acrigel y gel
+- Técnica de limado perfecto
+- Técnica de limado con broca 5 en 1
+- Técnica soft gel
+- Relleno y retiro de sistema
+- Acripie
+- Elevaciones del torno
+- Retiro de uñas artificiales
+
+**Módulo 3 — Decoraciones básicas y avanzadas**
+- Francesas
+- Animal print
+- Diseños comerciales
+- Baby boomer
+- Baby color y glam
+- Técnicas de encapsulado
+- Técnica en reversa
+- Flores en 3D acrílicas y en gel
+- Aerografía
+- Decoraciones con pedrería
+- Efectos: espejo, aurora, marmolado, blooming, agua y ojo de gato
+
+**Módulo 4 — Baño en acrílico, gel y base rubber**
+- Normas para la ejecución
+- Limado
+- Técnicas de recubrimiento
+- Nivelación con base rubber
+- Baño en acrílico
+- Baño en gel
+
+**Módulo 5 — Manicura y pedicura spa**
+- Jelly spa
+- Exfoliación
+- Veloterapia
+- Guantes hidratantes
+- Parafina
+
+**Finalización**
+- Evaluaciones
+- Presentación de trabajos
+- Finalización de prácticas
+- Acto de grado
+- Certificación
+- Bolsa de empleo
+
+---
+
+## 14. Servicios: lineamiento global
+
+### Página índice `/servicios`
+Debe mostrar las categorías principales:
+- Peluquería
+- Uñas
+- Cejas y depilación
+- Cuidado personal
+
+### CTA principal de servicios
+Cada categoría debe tener botón:
+- **Reservar por WhatsApp**
+- **Solicitar cita**
+
+### WhatsApp servicios
+Usar como base el número:
+- `652384970`
+
+Formato sugerido del mensaje:
+- `Hola, quiero reservar una cita para [SERVICIO_O_CATEGORIA] en Torzan Kairos. ¿Podrían compartirme disponibilidad y confirmar el precio?`
+
+### Diseño de páginas de servicios
+Cada página debe incluir:
+- hero comercial
+- resumen breve
+- lista de servicios incluidos
+- precios visibles
+- galería
+- CTA a WhatsApp
+- bloque cruzado hacia cursos relacionados si aplica
+
+---
+
+## 15. Contenido obligatorio de servicios
+
+### Regla comercial importante
+El usuario ha decidido usar **los precios más altos** entre las piezas compartidas cuando existan variaciones.
+
+Si un precio no es completamente claro, usar alguna de estas salidas:
+- `desde X€`
+- `consultar`
+- `sujeto a valoración`
+
+No inventar tarifas.
+
+---
+
+### 15.1 Servicios de Uñas
+
+#### Categoría
+**Uñas**
+
+#### Servicios y precios a usar
+- Manicura tradicional — **7€**
+- Pedicura tradicional — **8€**
+- Manicura permanente / esmaltado permanente — **10€**
+- Pedicura permanente / semipermanente — **10€**
+- Uñas en gel o acrílico — **15€**
+- Manicura semipermanente — **7€**
+
+> Si se busca mayor limpieza de UX, se pueden consolidar algunos ítems y mostrar “desde” cuando haya matices entre permanente y semipermanente.
+
+---
+
+### 15.2 Servicios de Cejas, Depilación y Pestañas
+
+#### Categoría
+**Cejas y depilación**
+
+#### Servicios y precios
+- Diseño + depilación + sombreado — **10€**
+- Depilación con hilo — **5€**
+- Depilación con cera — **5€**
+- Pestañas por grupo — **15€**
+- Labio — **3€**
+
+---
+
+### 15.3 Servicios de Peluquería
+
+#### Categoría
+**Peluquería**
+
+#### Servicios y precios base
+- Corte — **7€**
+- Lavado — **3€**
+- Peinado — **desde 8€**
+- Hidratación / tratamiento — **15€**
+- Tinte — **desde 14€**
+- Mechas — **desde 16€**
+- Balayage — **consultar**
+- Keratina — **consultar**
+- Rayos — **consultar**
+- Ondulación — **consultar**
+- Alisados — **consultar**
+
+> No mezclar demasiados listados si vuelve confusa la página. Priorizar claridad comercial.
+
+---
+
+### 15.4 Servicios de Cuidado Personal
+
+#### Categoría
+**Cuidado personal**
+
+#### Servicios y precios
+- Limpieza facial — **5€**
+- Diagnóstico de piel y tratamiento — **10€**
+- Tratamientos corporales relajantes — **15€**
+- Tratamientos drenantes — **15€**
+- Tratamientos adelgazantes — **15€**
+
+---
+
+## 16. Contacto y datos operativos
+
+### WhatsApp principal
+- `652 38 49 70`
+
+### Teléfono secundario / general visible en materiales
+- `+34 910 133 950`
+
+### Dirección visible en materiales
+- `C/ Embajadores 61, Madrid`
+
+### Regla
+Usar **WhatsApp principal** como CTA prioritario en cursos y servicios. El teléfono secundario puede aparecer como contacto adicional si la UI lo permite.
+
+---
+
+## 17. Assets visuales disponibles
+
+Actualmente existen:
+- logo horizontal
+- logo vertical
+- isotipo
+- favicon
+- paleta aprobada
+- PDF institucional
+- imágenes reales de cursos
+- imágenes de servicios y pricing antiguos
+
+### Regla de uso de assets
+- las imágenes compartidas sí deben usarse como apoyo visual
+- los flyers viejos **NO** deben incrustarse como pieza final informativa dentro del sitio
+- el contenido de esos flyers debe transformarse en UI web moderna
+- las fotos sí pueden reutilizarse en hero, cards, banners, galerías o fondos con overlay
+
+---
+
+## 18. Reglas de implementación para Codex
+
+1. Siempre leer este archivo antes de ejecutar un nuevo hito.
+2. No redefinir la arquitectura sin justificación.
+3. No inventar cursos, servicios o precios fuera de lo aquí definido.
+4. No cambiar la narrativa de marca aprobada.
+5. No usar estilos que rompan la coherencia entre cursos y servicios.
+6. Mantener componentes reutilizables.
+7. Centralizar el contenido editable en archivos de datos.
+8. Preparar cada CTA de WhatsApp mediante helpers reutilizables.
+9. Diseñar para desktop, tablet y móvil.
+10. Priorizar legibilidad, limpieza visual y conversión.
+
+---
+
+## 19. Estructura técnica recomendada
+
+Ejemplo sugerido:
+
+- `src/content/site.ts`
+- `src/content/courses.ts`
+- `src/content/services.ts`
+- `src/content/contact.ts`
+- `src/lib/whatsapp.ts`
+- `src/components/...`
+- `src/pages/...` o estructura equivalente según el router usado
+
+### Recomendación
+Desacoplar completamente:
+- contenido
+- rutas
+- componentes visuales
+- helpers de CTA
+
+---
+
+## 20. Componentes que deben existir
+
+- `SectionHeading`
+- `HeroSection`
+- `CTAButton`
+- `CourseCard`
+- `ServiceCard`
+- `PriceList`
+- `ModuleAccordion`
+- `GalleryGrid`
+- `ContactBlock`
+- `WhatsAppButton`
+- `PageIntro`
+- `HighlightStats` o equivalente
+
+---
+
+## 21. Estrategia de diseño por página
+
+### Home
+Híbrido, equilibrado entre institucional, académico y comercial.
+
+### Historia
+Editorial, elegante, narrativa.
+
+### Cursos índice
+Aspiracional + académico.
+
+### Cursos detalle
+Académico, claro, completo, ordenado.
+
+### Servicios índice
+Más comercial y directo.
+
+### Servicios detalle
+Conversión + pricing + confianza.
+
+### Contacto
+Simple, directo, premium.
+
+---
+
+## 22. Qué evitar
+
+- no usar carruseles innecesarios
+- no saturar con texto corrido
+- no repetir visualmente el mismo bloque demasiadas veces
+- no convertir la web en un collage de flyers
+- no usar demasiados estilos distintos por categoría
+- no abusar del dorado
+- no romper accesibilidad por bajo contraste
+
+---
+
+## 23. Definición de éxito
+
+El proyecto se considera bien encaminado cuando:
+
+- el Home comunica claramente academia + servicios
+- los cursos tienen páginas individuales completas
+- los servicios tienen páginas individuales claras y comerciales
+- los CTA a WhatsApp funcionan
+- el branding se siente consistente
+- la web se ve moderna pero respetuosa con la esencia actual de Torzan Kairos
+- el contenido queda desacoplado para ajustes futuros
+
+---
 
 ## 24. Instrucción final para Codex
 
-Construir una primera versión que ya se pueda enseñar al cliente como avance real, aunque todavía falten activos. La experiencia debe sentirse completa, coherente y premium desde el primer hito.
+Antes de cada hito:
+1. leer este archivo;
+2. confirmar mentalmente el objetivo del hito;
+3. implementar respetando este contexto;
+4. no improvisar contenido fuera de este marco;
+5. entregar avance limpio, coherente y escalable.
+
+# El contenido de las paginas esta en el archivo: codex_master_prompt_torzan_kairos.md

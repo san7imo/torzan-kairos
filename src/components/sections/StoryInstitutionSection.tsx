@@ -8,8 +8,8 @@ export function StoryInstitutionSection() {
     <Section tone="light">
       <SectionHeading
         eyebrow="Misión, visión y objetivos"
-        title="La dimensión institucional se presenta con claridad, pero sin romper el tono humano y editorial de la página."
-        description="Cada bloque resume los ejes aprobados de marca con una jerarquía visual compatible con el resto del sitio."
+        title="La dimensión institucional se expresa con claridad, sin perder la calidez ni la sensibilidad de la historia."
+        description="Estos ejes recogen la manera en que Torzan Kairos entiende la enseñanza, la proyección y el respeto por la profesión."
       />
 
       <div className="mt-14 grid gap-6 lg:grid-cols-3">

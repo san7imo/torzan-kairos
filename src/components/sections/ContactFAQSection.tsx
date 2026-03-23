@@ -1,4 +1,4 @@
-import { contactFaqs } from '../../content/site';
+import { contactFaqs } from '../../data/faqs';
 import { Reveal } from '../common/Reveal';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
@@ -7,9 +7,9 @@ export function ContactFAQSection() {
   return (
     <Section tone="light">
       <SectionHeading
-        eyebrow="FAQ editable"
-        title="Preguntas breves para sostener claridad comercial mientras llega la información definitiva."
-        description="Las respuestas están planteadas como placeholders honestos y pueden sustituirse más adelante sin cambiar estructura."
+        eyebrow="Preguntas frecuentes"
+        title="Respuestas breves para orientar el proceso de contacto con claridad."
+        description="Estas preguntas ayudan a resolver dudas habituales sobre cursos, servicios, precios y disponibilidad."
       />
 
       <dl className="mt-14 grid gap-5 lg:grid-cols-3">

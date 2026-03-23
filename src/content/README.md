@@ -1,18 +1,23 @@
 # Content guide
 
-Este directorio concentra el contenido editable y las constantes de demo del proyecto.
+El contenido editable y comercial del proyecto ahora vive principalmente en `src/data/`.
 
-## Archivo principal
+## Archivos principales
 
-- `site.ts`: fuente central para metadatos SEO, héroes de página, cursos placeholder, docentes, FAQ, contacto e historia.
+- `site.ts`: metadatos SEO, navegación, héroes de página, assets visuales compartidos y narrativa editorial global.
+- `../data/courses.ts`: cursos, módulos, destacados y helpers de detalle académico.
+- `../data/services.ts`: categorías de servicio, precios, estados comerciales y helpers de detalle.
+- `../data/contact.ts`: teléfonos, dirección, formulario, highlights y bloques de contacto.
+- `../data/faqs.ts`: preguntas frecuentes editables.
+- `../data/whatsapp.ts`: número principal, mensajes prellenados y constructor de enlaces.
 
 ## Qué reemplazar cuando llegue contenido final
 
-- Imágenes reales: revisar placeholders visuales y bloques de galería en Home, Historia y Contacto.
+- Imágenes reales: revisar placeholders visuales y bloques de galería en Home, Historia, Cursos, Servicios y Contacto.
 - Videos: sustituir hero placeholders por video o banner final solo si el peso está controlado.
-- Cursos: completar programas, duración, horarios, precios y detalles comerciales en `featuredCourses` y `trainingAreas`.
-- Docentes: ampliar perfiles y fotografías en `facultyMembers`.
-- Ubicación final: actualizar `contactQuickDetails`, `footerContact` y cualquier bloque de mapa o sede.
+- Cursos: completar duración, horarios y datos comerciales en `src/data/courses.ts`.
+- Servicios: ajustar carta final, estados de precio y observaciones en `src/data/services.ts`.
+- Contacto: actualizar correo, horario y cualquier dato operativo pendiente en `src/data/contact.ts`.
 - Historia: sustituir los bloques editoriales si llega una versión narrativa final aprobada.
 - Testimonios: no existen aún; agregarlos solo cuando estén validados por el cliente.
 

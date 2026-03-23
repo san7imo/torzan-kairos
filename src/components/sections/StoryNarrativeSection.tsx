@@ -1,6 +1,7 @@
 import { storyEditorialCards } from '../../content/site';
+import { storyNarrativeAsset } from '../../data/media';
 import { Reveal } from '../common/Reveal';
-import { PlaceholderMedia } from '../ui/PlaceholderMedia';
+import { ImagePanel } from '../ui/ImagePanel';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
 
@@ -11,8 +12,8 @@ export function StoryNarrativeSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Origen de Torzan Kairos"
-            title="Una historia que nace desde la visión de formar con exigencia y cercanía humana."
-            description="La página se construye como una lectura editorial: menos corporativa, más narrativa, con espacio para que el origen de la academia tenga peso visual propio."
+            title="Una historia que nace desde la decisión de formar con exigencia, sensibilidad y cercanía humana."
+            description="Desde 2010, la marca ha sostenido una visión donde la técnica, la ética y el desarrollo del ser hacen parte del mismo camino."
           />
 
           <div className="mt-10 rounded-[2rem] border border-brand-blue/10 bg-brand-blue p-8 text-mist shadow-[0_24px_60px_rgba(20,47,74,0.18)]">
@@ -23,9 +24,8 @@ export function StoryNarrativeSection() {
               Mariela Torres Zambrano
             </h3>
             <p className="mt-5 text-sm leading-8 text-mist/74">
-              Desde 2010, su impulso ha dado forma a una academia que entiende la formación
-              profesional como una combinación de técnica, ética, bioseguridad y desarrollo del
-              ser.
+              Su impulso dio forma a una academia que entiende la belleza como oficio,
+              responsabilidad y proyección profesional.
             </p>
           </div>
         </Reveal>
@@ -46,11 +46,13 @@ export function StoryNarrativeSection() {
           ))}
 
           <Reveal delay={0.18}>
-            <PlaceholderMedia
-              accent="frame"
+            <ImagePanel
+              alt={storyNarrativeAsset.alt}
               className="min-h-[320px]"
-              label="Retrato en actualización"
-              title="Espacio preparado para fotografía editorial de fundadora o marca"
+              imgClassName="object-cover object-center"
+              label={storyNarrativeAsset.label}
+              src={storyNarrativeAsset.src}
+              title={storyNarrativeAsset.title}
             />
           </Reveal>
         </div>

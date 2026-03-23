@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { featuredCourses } from '../../content/site';
+import { featuredCourses } from '../../data/courses';
 import { Reveal } from '../common/Reveal';
 import { Button } from '../ui/Button';
 import { PlaceholderMedia } from '../ui/PlaceholderMedia';
@@ -13,7 +13,7 @@ export function HomeCoursesSection() {
         <SectionHeading
           eyebrow="Cursos destacados"
           title="Bloques comerciales preparados para presentar programas sin inventar oferta final."
-          description="Cada tarjeta funciona como placeholder premium y deja visible que la información detallada seguirá entrando sin rehacer el Home."
+          description="Cada tarjeta funciona como placeholder premium y ahora toma su contenido desde archivos editables separados del layout."
         />
         <Button to="/contacto" variant="ghost">
           Solicitar orientación

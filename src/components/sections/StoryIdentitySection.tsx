@@ -1,6 +1,7 @@
 import { storyJourneyPoints, storyRootsCards } from '../../content/site';
+import { storyIdentityAsset } from '../../data/media';
 import { Reveal } from '../common/Reveal';
-import { PlaceholderMedia } from '../ui/PlaceholderMedia';
+import { ImagePanel } from '../ui/ImagePanel';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
 
@@ -12,8 +13,8 @@ export function StoryIdentitySection() {
           <Reveal>
             <SectionHeading
               eyebrow="Raíces y proyección"
-              title="Colombia y España no aparecen como referencia decorativa, sino como estructura de identidad."
-              description="La historia de Torzan Kairos se apoya en esa doble raíz para comunicar oficio, amplitud de mirada y dirección futura."
+              title="Colombia y España dan forma a una identidad que se siente cercana, rigurosa y contemporánea."
+              description="Esa doble raíz sostiene la personalidad de la marca y su manera de enseñar, atender y proyectarse."
               invert
             />
           </Reveal>
@@ -37,11 +38,13 @@ export function StoryIdentitySection() {
 
         <div>
           <Reveal delay={0.1}>
-            <PlaceholderMedia
-              accent="arched"
+            <ImagePanel
+              alt={storyIdentityAsset.alt}
               className="min-h-[360px]"
-              label="Imagen referencial"
-              title="Composición editorial lista para reemplazar por material visual de historia"
+              imgClassName="object-cover object-center"
+              label={storyIdentityAsset.label}
+              src={storyIdentityAsset.src}
+              title={storyIdentityAsset.title}
             />
           </Reveal>
 

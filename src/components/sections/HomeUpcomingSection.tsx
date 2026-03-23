@@ -1,4 +1,4 @@
-import { upcomingCommercialCards } from '../../content/site';
+import { upcomingCommercialCards } from '../../data/services';
 import { Reveal } from '../common/Reveal';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';

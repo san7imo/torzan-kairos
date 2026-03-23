@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '../../lib/cn';
 
@@ -10,7 +10,9 @@ type BaseButtonProps = {
   variant?: 'primary' | 'secondary' | 'ghost';
 };
 
-type ButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = BaseButtonProps &
+  ButtonHTMLAttributes<HTMLButtonElement> &
+  Pick<AnchorHTMLAttributes<HTMLAnchorElement>, 'target' | 'rel'>;
 
 const variants = {
   primary:
@@ -28,6 +30,8 @@ export function Button({
   children,
   className,
   href,
+  rel,
+  target,
   to,
   type = 'button',
   variant = 'primary',
@@ -45,7 +49,7 @@ export function Button({
 
   if (href) {
     return (
-      <a className={classes} href={href}>
+      <a className={classes} href={href} rel={rel} target={target}>
         {children}
       </a>
     );

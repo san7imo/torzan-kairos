@@ -1,4 +1,5 @@
 import { pageHeroes, pageMetadata, storyHeroHighlights } from '../content/site';
+import { pageHeroAssets } from '../data/media';
 import { FacultySection } from '../components/sections/FacultySection';
 import { StoryClosingSection } from '../components/sections/StoryClosingSection';
 import { StoryIdentitySection } from '../components/sections/StoryIdentitySection';
@@ -6,7 +7,7 @@ import { StoryInstitutionSection } from '../components/sections/StoryInstitution
 import { StoryNarrativeSection } from '../components/sections/StoryNarrativeSection';
 import { ValuesSection } from '../components/sections/ValuesSection';
 import { PageHero } from '../components/layout/PageHero';
-import { PlaceholderMedia } from '../components/ui/PlaceholderMedia';
+import { ImagePanel } from '../components/ui/ImagePanel';
 import { usePageMetadata } from '../hooks/usePageMetadata';
 
 export function StoryPage() {
@@ -20,15 +21,17 @@ export function StoryPage() {
         description={pageHeroes.story.description}
         aside={
           <div className="space-y-5">
-            <PlaceholderMedia
-              accent="frame"
+            <ImagePanel
+              alt={pageHeroAssets.story.alt}
               className="min-h-[380px]"
-              label={pageHeroes.story.mediaLabel}
-              title={pageHeroes.story.mediaTitle}
+              imgClassName="object-cover object-center"
+              label={pageHeroAssets.story.label}
+              src={pageHeroAssets.story.src}
+              title={pageHeroAssets.story.title}
             />
             <div className="rounded-[2rem] border border-white/10 bg-white/6 p-6 backdrop-blur-sm">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent-gold">
-                Ejes aprobados
+                Ejes esenciales
               </p>
               <div className="mt-5 grid gap-3">
                 {storyHeroHighlights.map((item) => (
