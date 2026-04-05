@@ -2,6 +2,7 @@ import { storyJourneyPoints, storyRootsCards } from '../../content/site';
 import { storyIdentityAsset } from '../../data/media';
 import { Reveal } from '../common/Reveal';
 import { ImagePanel } from '../ui/ImagePanel';
+import { Panel } from '../ui/Panel';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
 
@@ -22,15 +23,15 @@ export function StoryIdentitySection() {
           <div className="mt-10 grid gap-5">
             {storyRootsCards.map((card, index) => (
               <Reveal key={card.title} delay={index * 0.08}>
-                <article className="rounded-[2rem] border border-white/10 bg-white/6 p-7 backdrop-blur-sm">
+                <Panel tone="dark">
                   <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent-gold">
                     {card.eyebrow}
                   </p>
                   <h3 className="mt-4 font-display text-3xl leading-tight text-mist">
                     {card.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-8 text-mist/72">{card.description}</p>
-                </article>
+                  <p className="mt-4 text-sm leading-7 text-mist/72">{card.description}</p>
+                </Panel>
               </Reveal>
             ))}
           </div>
@@ -48,10 +49,10 @@ export function StoryIdentitySection() {
             />
           </Reveal>
 
-          <div className="mt-6 grid gap-4">
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
             {storyJourneyPoints.map((point, index) => (
               <Reveal key={point.step} delay={0.12 + index * 0.08}>
-                <article className="rounded-[1.8rem] border border-white/10 bg-white/5 p-6">
+                <Panel className="h-full" padding="md" tone="dark">
                   <div className="flex items-start gap-4">
                     <span className="mt-1 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent-gold/30 bg-accent-gold/10 text-xs font-semibold tracking-[0.2em] text-accent-gold">
                       {point.step}
@@ -63,7 +64,7 @@ export function StoryIdentitySection() {
                       <p className="mt-3 text-sm leading-7 text-mist/72">{point.description}</p>
                     </div>
                   </div>
-                </article>
+                </Panel>
               </Reveal>
             ))}
           </div>

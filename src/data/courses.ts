@@ -212,25 +212,25 @@ export const coursePrograms: CourseProgram[] = [
 
 export const coursePresentationBySlug: Record<CourseSlug, CoursePresentation> = {
   barberia: {
-    durationLabel: 'Duración por confirmar',
+    durationLabel: '240 horas',
     durationNote:
-      'Te orientamos personalmente sobre intensidad, horarios y proceso de matrícula a través de nuestros canales de atención.',
+      'Programa orientado a formación práctica y progresiva, con acompañamiento técnico, criterio profesional y proyección laboral.',
     whatsappMessage: buildCourseWhatsAppMessage(coursePrograms[0]),
     heroAsset: courseMediaBySlug.barberia.heroAsset,
     gallery: courseMediaBySlug.barberia.gallery,
   },
   peluqueria: {
-    durationLabel: 'Duración por confirmar',
+    durationLabel: '240 horas prácticas',
     durationNote:
-      'Te acompañamos con información actualizada sobre jornadas, intensidad y disponibilidad del programa.',
+      'Ruta académica enfocada en práctica aplicada, estructura técnica y acompañamiento del proceso formativo.',
     whatsappMessage: buildCourseWhatsAppMessage(coursePrograms[1]),
     heroAsset: courseMediaBySlug.peluqueria.heroAsset,
     gallery: courseMediaBySlug.peluqueria.gallery,
   },
   unas: {
-    durationLabel: 'Duración por confirmar',
+    durationLabel: '240 horas prácticas',
     durationNote:
-      'Consulta con el equipo académico la intensidad, horarios disponibles y próximos pasos para matrícula.',
+      'Programa intensivo y progresivo orientado al dominio técnico, la precisión estética y el servicio profesional.',
     whatsappMessage: buildCourseWhatsAppMessage(coursePrograms[2]),
     heroAsset: courseMediaBySlug.unas.heroAsset,
     gallery: courseMediaBySlug.unas.gallery,

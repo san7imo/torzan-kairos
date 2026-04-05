@@ -12,7 +12,7 @@ export function InfoCard({ className, description, icon, title }: InfoCardProps)
   return (
     <article
       className={cn(
-        'rounded-[1.8rem] border border-white/10 bg-white/6 p-6 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-accent-gold/35 hover:bg-white/8',
+        'rounded-[1.8rem] border border-white/10 bg-white/6 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent-gold/35 hover:bg-white/8',
         className,
       )}
     >

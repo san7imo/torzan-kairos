@@ -11,6 +11,7 @@ import { SectionHeading } from '../ui/SectionHeading';
 import { WhatsAppCTA } from '../ui/WhatsAppCTA';
 
 const locationDetail = contactQuickDetails.find((detail) => detail.kind === 'location');
+const phoneDetail = contactQuickDetails.find((detail) => detail.kind === 'phone');
 const whatsappDetail = contactQuickDetails.find((detail) => detail.kind === 'whatsapp');
 
 export function HybridLocationSection() {
@@ -24,13 +25,14 @@ export function HybridLocationSection() {
             description="Dirección, canales de atención y acceso directo a WhatsApp conviven en un bloque claro y fácil de recorrer."
           />
 
-          <div className="mt-8 grid gap-4">
-            {locationDetail ? <ContactDetailCard detail={locationDetail} icon={MapPinned} /> : null}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {locationDetail ? <ContactDetailCard className="sm:col-span-2" detail={locationDetail} icon={MapPinned} /> : null}
             {whatsappDetail ? <ContactDetailCard detail={whatsappDetail} icon={Phone} /> : null}
+            {phoneDetail ? <ContactDetailCard detail={phoneDetail} icon={Phone} /> : null}
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppCTA label="Ir a WhatsApp" message={whatsappMessages.contactBooking} />
+            <WhatsAppCTA label="Reservar por WhatsApp" message={whatsappMessages.contactBooking} />
             <Button to="/contacto" variant="ghost">
               Ir a contacto
             </Button>

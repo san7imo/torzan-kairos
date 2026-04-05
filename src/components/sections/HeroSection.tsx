@@ -11,7 +11,7 @@ export function HeroSection() {
   return (
     <section className="site-grid relative overflow-hidden pb-18 pt-10 sm:pb-24 lg:pb-28 lg:pt-14">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(231,156,31,0.18),transparent_24%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,47,74,0.4),transparent_30%,rgba(7,21,35,0.35)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(33,33,33,0.46),transparent_30%,rgba(18,18,18,0.38)_100%)]" />
       <Container className="relative z-10">
         <div className="grid gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
           <Reveal className="max-w-3xl">
@@ -38,7 +38,7 @@ export function HeroSection() {
               {heroHighlights.map((item, index) => (
                 <motion.div
                   key={item}
-                  className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4 text-sm leading-6 text-mist/76 backdrop-blur-sm"
+                  className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4 text-sm leading-6 text-mist/76"
                   initial={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                   viewport={{ once: true }}
@@ -58,7 +58,7 @@ export function HeroSection() {
                 label="Banner visual preparado"
                 title="Hero placeholder listo para reemplazar por fotografía o video final"
               />
-              <div className="absolute bottom-6 left-6 max-w-xs rounded-[1.6rem] border border-white/12 bg-brand-blue/88 p-5 shadow-[0_20px_40px_rgba(0,0,0,0.24)] backdrop-blur-md">
+              <div className="absolute bottom-6 left-6 max-w-xs rounded-[1.6rem] border border-white/12 bg-brand-blue/88 p-5 shadow-[0_20px_40px_rgba(0,0,0,0.24)]">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent-gold">
                   Experiencia Torzan Kairos
                 </p>

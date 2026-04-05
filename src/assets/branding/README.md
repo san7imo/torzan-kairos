@@ -1,12 +1,20 @@
 # Branding assets
 
-Esta carpeta queda preparada para incorporar los activos finales de marca sin romper la app.
+Activos oficiales de marca conectados a la interfaz en esta etapa:
 
-Archivos sugeridos:
+- `TK_Logo horizontal dorado con sombreado.png`
+- `TK_Logo vertical dorado con sombreado.png`
+- `TK_Logo icono dorado con sombreado.png`
+- `TK_Logo tipografico dorado con sombreado.png`
 
-- `logo-horizontal.*`
-- `logo-vertical.*`
-- `isotipo.*`
-- versiones optimizadas para `svg`, `png` o `webp` según corresponda
+Versiones optimizadas disponibles para web:
 
-Mientras no se incorporen aquí los activos definitivos, la interfaz usa una marca tipográfica temporal y un `favicon.svg` provisional en `public/`.
+- `TK_Logo horizontal dorado con sombreado.webp`
+- `TK_Logo vertical dorado con sombreado.webp`
+- `TK_Logo icono dorado con sombreado.webp`
+
+Notas:
+
+- La interfaz ya usa los logos dorados reales en header y footer.
+- La interfaz ya usa versiones `webp` optimizadas para reducir peso en producción.
+- El favicon actual puede actualizarse más adelante si se entrega una versión reducida del isotipo.

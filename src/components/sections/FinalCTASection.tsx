@@ -1,13 +1,16 @@
 import { ArrowRight } from 'lucide-react';
+import { whatsappMessages } from '../../data/whatsapp';
 import { Reveal } from '../common/Reveal';
 import { Button } from '../ui/Button';
+import { Panel } from '../ui/Panel';
 import { Section } from '../ui/Section';
+import { WhatsAppCTA } from '../ui/WhatsAppCTA';
 
 export function FinalCTASection() {
   return (
     <Section className="pb-24 pt-18" tone="transparent">
       <Reveal>
-        <div className="rounded-[2.4rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.09),rgba(255,255,255,0.04))] px-6 py-10 shadow-[0_26px_80px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:px-10 sm:py-14 lg:flex lg:items-end lg:justify-between lg:gap-10">
+        <Panel tone="dark">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">
               Siguiente paso
@@ -20,16 +23,18 @@ export function FinalCTASection() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0">
-            <Button to="/contacto" variant="primary">
-              Solicitar información
-            </Button>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <WhatsAppCTA
+              label="Reservar por WhatsApp"
+              message={whatsappMessages.contactBooking}
+              variant="primary"
+            />
             <Button to="/historia" variant="secondary">
               Ver historia
               <ArrowRight size={16} />
             </Button>
           </div>
-        </div>
+        </Panel>
       </Reveal>
     </Section>
   );

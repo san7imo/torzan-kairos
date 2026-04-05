@@ -17,6 +17,12 @@ export type FeatureCard = {
   description: string;
 };
 
+export type MetricItem = {
+  value: string;
+  label: string;
+  note?: string;
+};
+
 export type ValueItem = {
   title: string;
   description: string;

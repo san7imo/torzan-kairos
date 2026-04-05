@@ -15,7 +15,7 @@ export function ContactDetailCard({ className, detail, icon: Icon, tone = 'light
     'block rounded-[1.6rem] border p-5 transition duration-300',
     isDark
       ? 'border-white/10 bg-white/5 text-mist hover:border-accent-gold/35 hover:bg-white/8'
-      : 'border-brand-blue/10 bg-white text-brand-blue shadow-[0_18px_50px_rgba(20,47,74,0.08)] hover:-translate-y-1 hover:border-accent-gold/30',
+      : 'border-brand-blue/10 bg-white text-brand-blue shadow-[0_18px_50px_rgba(33,33,33,0.08)] hover:-translate-y-1 hover:border-accent-gold/30',
     className,
   );
 

@@ -6,7 +6,7 @@ export function HomeMidCTASection() {
   return (
     <Section className="py-14 sm:py-16" tone="transparent">
       <Reveal>
-        <div className="rounded-[2.2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] px-6 py-9 shadow-[0_24px_70px_rgba(0,0,0,0.18)] backdrop-blur-sm lg:flex lg:items-center lg:justify-between lg:gap-10">
+        <div className="rounded-[2.2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] px-6 py-9 shadow-[0_24px_70px_rgba(0,0,0,0.18)] lg:flex lg:items-center lg:justify-between lg:gap-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent-gold">
               Contacto comercial

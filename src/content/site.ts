@@ -4,6 +4,7 @@ import type {
   FeatureCard,
   FacultyMember,
   HomeHeroContent,
+  MetricItem,
   MediaTile,
   NavItem,
   PageHeroContent,
@@ -123,8 +124,8 @@ export const homeHero: HomeHeroContent = {
     href: '/cursos',
   },
   secondaryAction: {
-    label: 'Ver servicios',
-    href: '/servicios',
+    label: 'Reservar cita',
+    href: '/contacto',
   },
   highlights: [
     'Fundada en 2010 por Mariela Torres Zambrano',
@@ -132,6 +133,21 @@ export const homeHero: HomeHeroContent = {
     'Formación integral y atención profesional en un mismo universo',
   ],
 };
+
+export const homeHeroMetrics: MetricItem[] = [
+  {
+    value: '2010',
+    label: 'Fundación',
+  },
+  {
+    value: 'Madrid',
+    label: 'Sede actual',
+  },
+  {
+    value: '2 líneas',
+    label: 'Academia + servicios',
+  },
+];
 
 export const homeInstitutionalHighlights = [
   'Torzan Kairos une formación profesional y servicios de belleza sin perder coherencia de marca.',

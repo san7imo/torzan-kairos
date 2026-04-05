@@ -20,7 +20,7 @@ const variants = {
   secondary:
     'border border-mist/18 bg-white/8 text-mist shadow-[0_12px_34px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 hover:border-accent-gold/42 hover:bg-white/12',
   ghost:
-    'border border-brand-blue/12 bg-white text-brand-blue shadow-[0_10px_28px_rgba(20,47,74,0.06)] hover:-translate-y-0.5 hover:border-accent-gold/50 hover:text-brand-blue hover:shadow-[0_18px_40px_rgba(20,47,74,0.1)]',
+    'border border-brand-blue/12 bg-white text-brand-blue shadow-[0_10px_28px_rgba(33,33,33,0.06)] hover:-translate-y-0.5 hover:border-accent-gold/50 hover:text-brand-blue hover:shadow-[0_18px_40px_rgba(33,33,33,0.1)]',
 };
 
 const baseClassName =

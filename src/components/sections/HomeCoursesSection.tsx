@@ -24,7 +24,7 @@ export function HomeCoursesSection() {
       <div className="mt-14 grid gap-6 lg:grid-cols-3">
         {featuredCourses.map((course, index) => (
           <Reveal key={course.title} delay={index * 0.08}>
-            <article className="flex h-full flex-col rounded-[2rem] border border-brand-blue/10 bg-white p-5 shadow-[0_18px_60px_rgba(20,47,74,0.08)]">
+            <article className="flex h-full flex-col rounded-[2rem] border border-brand-blue/10 bg-white p-5 shadow-[0_18px_60px_rgba(33,33,33,0.08)]">
               <PlaceholderMedia
                 accent={course.accent}
                 className="min-h-[250px]"

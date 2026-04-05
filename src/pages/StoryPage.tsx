@@ -1,3 +1,4 @@
+import logoVertical from '../assets/branding/TK_Logo vertical dorado con sombreado.webp';
 import { pageHeroes, pageMetadata, storyHeroHighlights } from '../content/site';
 import { pageHeroAssets } from '../data/media';
 import { FacultySection } from '../components/sections/FacultySection';
@@ -8,6 +9,7 @@ import { StoryNarrativeSection } from '../components/sections/StoryNarrativeSect
 import { ValuesSection } from '../components/sections/ValuesSection';
 import { PageHero } from '../components/layout/PageHero';
 import { ImagePanel } from '../components/ui/ImagePanel';
+import { Panel } from '../components/ui/Panel';
 import { usePageMetadata } from '../hooks/usePageMetadata';
 
 export function StoryPage() {
@@ -29,7 +31,13 @@ export function StoryPage() {
               src={pageHeroAssets.story.src}
               title={pageHeroAssets.story.title}
             />
-            <div className="rounded-[2rem] border border-white/10 bg-white/6 p-6 backdrop-blur-sm">
+            <Panel tone="dark">
+              <img
+                alt="Logo vertical dorado de Torzan Kairos"
+                className="h-24 w-auto"
+                loading="lazy"
+                src={logoVertical}
+              />
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent-gold">
                 Ejes esenciales
               </p>
@@ -43,7 +51,7 @@ export function StoryPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </Panel>
           </div>
         }
       />

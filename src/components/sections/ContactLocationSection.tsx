@@ -5,8 +5,8 @@ import { whatsappMessages } from '../../data/whatsapp';
 import { Reveal } from '../common/Reveal';
 import { ContactDetailCard } from '../ui/ContactDetailCard';
 import { ImagePanel } from '../ui/ImagePanel';
+import { PageIntro } from '../ui/PageIntro';
 import { Section } from '../ui/Section';
-import { SectionHeading } from '../ui/SectionHeading';
 import { WhatsAppCTA } from '../ui/WhatsAppCTA';
 
 const locationDetail = contactQuickDetails.find((detail) => detail.kind === 'location');
@@ -17,11 +17,11 @@ export function ContactLocationSection() {
     <Section tone="dark">
       <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
         <Reveal>
-          <SectionHeading
+          <PageIntro
             eyebrow={contactLocationContent.eyebrow}
             title={contactLocationContent.title}
             description={contactLocationContent.description}
-            invert
+            tone="dark"
           />
 
           <div className="mt-8 grid gap-4">

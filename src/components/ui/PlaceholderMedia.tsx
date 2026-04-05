@@ -33,7 +33,7 @@ export function PlaceholderMedia({
       )}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,156,31,0.18),transparent_34%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(20,47,74,0.8)_34%,rgba(9,26,42,0.96)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(33,33,33,0.78)_34%,rgba(18,18,18,0.96)_100%)]" />
       <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.26))]" />
       <div className="relative flex h-full min-h-[220px] flex-col justify-between rounded-[1.5rem] border border-white/8 bg-brand-blue/36 px-5 py-6 sm:px-6">
         <span className="inline-flex w-fit rounded-full border border-accent-gold/32 bg-accent-gold/10 px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-accent-gold">

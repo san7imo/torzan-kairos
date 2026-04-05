@@ -1,133 +1,144 @@
-import barberiaHero from '../assets/images/barberia.jpg';
-import barberiaPortrait from '../assets/images/barberia1.jpg';
-import barberiaPortraitAlt from '../assets/images/barberia2.jpg';
-import barberiaEditorial from '../assets/images/barberia3.jpg';
-import barberiaWide from '../assets/images/barberia4.jpg';
-import barberiaIconic from '../assets/images/barberiacono.jpg';
-import manicurePortrait from '../assets/images/manicure.jpg';
-import manicureDetail from '../assets/images/manicure2.jpg';
-import manicureFinish from '../assets/images/manicure3.jpg';
-import manicureDecoration from '../assets/images/manicuredecoration.png';
-import peluqueriaDetail from '../assets/images/peluqueria 4.jpg';
-import peluqueriaCut from '../assets/images/peluqueria 6.jpg';
-import peluqueriaHero from '../assets/images/peluqueria.jpg';
-import peluqueriaPortrait from '../assets/images/peluqueria1.jpg';
-import peluqueriaBeauty from '../assets/images/peluqueria2.jpg';
-import peluqueriaWide from '../assets/images/peluqueria3.jpg';
-import peluqueriaSoft from '../assets/images/peluqueria5.jpg';
-import unasHero from '../assets/images/uñas.jpg';
-import unasDetail from '../assets/images/uñas1.jpg';
+import espejosPeluqueria from '../assets/images/Espejospeluqueria.webp';
+import fireflyBarberia from '../assets/images/FireflyBarberia.webp';
+import fireflyManicure from '../assets/images/FireflyManicure.webp';
+import barberiaHero from '../assets/images/barberia.webp';
+import cartelEnLaCalle from '../assets/images/cartelenlacalle.webp';
+import certificadoFoto from '../assets/images/certificadofoto.webp';
+import claseDeMaquillaje from '../assets/images/clase de maquillaje.webp';
+import cuadernoEditorial from '../assets/images/cuaderno.webp';
+import cuadernoMesa from '../assets/images/cuaderno2.webp';
+import entregaDeCertificado from '../assets/images/entregadecertificado.webp';
+import fachadaConLogo from '../assets/images/fachadaconlogo.webp';
+import herramientasDeTrabajo from '../assets/images/herramientas de trabajo.webp';
+import manicuristaHero from '../assets/images/manicurista.webp';
+import manicuristaDetalle from '../assets/images/manicurista-detalle.webp';
+import materialesAlumnos from '../assets/images/materiales alumnos.webp';
+import papelProtector from '../assets/images/papel protector.webp';
+import profesionalesPremios from '../assets/images/profesionales premios.webp';
+import profesionalesEquipo from '../assets/images/profesionales.webp';
+import profesoraYAlumna from '../assets/images/profesora y alumna.webp';
+import profesoresEquipo from '../assets/images/profesores.webp';
+import tarjetasDePresentacion from '../assets/images/tarjetas de presentacion.webp';
+import uniformeEditorial from '../assets/images/uniforme.webp';
 import type { CourseSlug, HomeGalleryAsset, ServiceSlug } from '../types/site';
 
 export const homeHeroAsset: HomeGalleryAsset = {
-  src: peluqueriaHero,
-  alt: 'Profesional de peluquería trabajando en el cabello de una clienta.',
+  src: fachadaConLogo,
+  alt: 'Fachada de Torzan Kairos con logo dorado sobre una base carbón.',
   label: 'Torzan Kairos',
-  title: 'Formación profesional y servicios de belleza en una misma experiencia.',
+  title: 'Una marca de formación y belleza con presencia sobria, premium y reconocible.',
   aspect: 'landscape',
+};
+
+export const homeHeroSideAsset: HomeGalleryAsset = {
+  src: profesoraYAlumna,
+  alt: 'Profesora guiando a una alumna durante una práctica de peluquería.',
+  label: 'Formación real',
+  title: 'Una experiencia académica donde la técnica se transmite con cercanía y criterio.',
+  aspect: 'portrait',
 };
 
 export const homeGalleryAssets: HomeGalleryAsset[] = [
   {
-    src: peluqueriaPortrait,
-    alt: 'Profesional de belleza en un entorno de salón.',
-    label: 'Peluquería',
-    title: 'Atención personalizada con técnica y detalle.',
+    src: profesionalesEquipo,
+    alt: 'Equipo Torzan Kairos en el interior de la academia.',
+    label: 'Equipo',
+    title: 'Una marca respaldada por presencia profesional y atención cuidada.',
     aspect: 'portrait',
   },
   {
-    src: barberiaWide,
-    alt: 'Escena de barbería profesional en un entorno contemporáneo.',
-    label: 'Barbería',
-    title: 'Espacios de práctica y servicio con carácter profesional.',
+    src: cuadernoMesa,
+    alt: 'Cuaderno editorial de Torzan Kairos con espiral dorada sobre mesa oscura.',
+    label: 'Identidad',
+    title: 'El universo de marca se expresa con detalle, materialidad y coherencia visual.',
     aspect: 'landscape',
   },
   {
-    src: manicureDecoration,
-    alt: 'Diseño artístico de uñas con acabado floral.',
-    label: 'Uñas',
-    title: 'Acabados estéticos que elevan la experiencia visual.',
-    aspect: 'square',
+    src: profesionalesPremios,
+    alt: 'Equipo de Torzan Kairos posando en una gala de premios.',
+    label: 'Prestigio',
+    title: 'La narrativa de marca también se apoya en reconocimiento, ceremonia y proyección.',
+    aspect: 'landscape',
   },
 ];
 
 export const pageHeroAssets = {
   story: {
-    src: barberiaIconic,
-    alt: 'Detalle editorial de barbería y oficio.',
+    src: profesionalesEquipo,
+    alt: 'Profesionales de Torzan Kairos posando dentro del espacio institucional.',
     label: 'Historia Torzan Kairos',
-    title: 'Trayectoria, oficio y visión de marca.',
+    title: 'Una trayectoria construida entre formación, imagen y visión de marca.',
     aspect: 'portrait' as const,
   },
   courses: {
-    src: peluqueriaCut,
-    alt: 'Trabajo técnico de corte en peluquería profesional.',
+    src: profesoraYAlumna,
+    alt: 'Profesora orientando a una alumna durante una práctica de peluquería.',
     label: 'Formación profesional',
-    title: 'Programas creados para formar técnica, criterio y proyección.',
+    title: 'Programas concebidos para aprender técnica, criterio y proyección profesional.',
     aspect: 'portrait' as const,
   },
   services: {
-    src: peluqueriaWide,
-    alt: 'Servicio de belleza en entorno profesional.',
+    src: espejosPeluqueria,
+    alt: 'Zona de espejos y estaciones de trabajo dentro del salón.',
     label: 'Servicios Torzan Kairos',
-    title: 'Atención estética con una lectura visual sobria y cuidada.',
+    title: 'Una experiencia de servicio clara, cuidada y alineada con el universo premium de la marca.',
     aspect: 'landscape' as const,
   },
   contact: {
-    src: peluqueriaPortrait,
-    alt: 'Atención personalizada en un espacio de belleza.',
+    src: cartelEnLaCalle,
+    alt: 'Señalética exterior de Torzan Kairos en un soporte urbano.',
     label: 'Contacto',
-    title: 'Canales claros para orientación, reservas y matrícula.',
-    aspect: 'portrait' as const,
+    title: 'Canales directos para reservas, matrículas y atención personalizada.',
+    aspect: 'landscape' as const,
   },
 };
 
 export const experienceAssets: HomeGalleryAsset[] = [
   {
-    src: peluqueriaWide,
-    alt: 'Trabajo técnico en salón de belleza.',
-    label: 'Formación',
-    title: 'Práctica guiada y acompañamiento constante.',
+    src: materialesAlumnos,
+    alt: 'Kit institucional de Torzan Kairos con bolsa, cuaderno y bolígrafo.',
+    label: 'Experiencia',
+    title: 'La experiencia comienza desde los materiales y el cuidado de cada detalle.',
     aspect: 'landscape',
   },
   {
-    src: barberiaPortraitAlt,
-    alt: 'Detalle de trabajo en barbería.',
-    label: 'Técnica',
-    title: 'Precisión y criterio profesional en cada proceso.',
+    src: profesoresEquipo,
+    alt: 'Docentes de Torzan Kairos posando con herramientas profesionales.',
+    label: 'Docencia',
+    title: 'El equipo docente sostiene el carácter técnico y humano de la academia.',
     aspect: 'portrait',
   },
   {
-    src: manicureDetail,
-    alt: 'Detalle de manicura profesional.',
-    label: 'Proyección',
-    title: 'Servicios y resultados que hablan desde el cuidado.',
+    src: manicuristaDetalle,
+    alt: 'Detalle de un servicio de uñas con reflejo sobre superficie pulida.',
+    label: 'Cuidado',
+    title: 'Los servicios también hacen parte de la experiencia premium y cercana de la marca.',
     aspect: 'square',
   },
 ];
 
 export const storyNarrativeAsset: HomeGalleryAsset = {
-  src: barberiaHero,
-  alt: 'Imagen editorial en blanco y negro asociada al oficio de barbería.',
-  label: 'Origen',
-  title: 'Una historia construida desde la disciplina, la visión y el oficio.',
+  src: entregaDeCertificado,
+  alt: 'Alumno de Torzan Kairos sosteniendo un certificado en el espacio institucional.',
+  label: 'Logro',
+  title: 'La historia también se cuenta a través de formación culminada, reconocimiento y orgullo profesional.',
   aspect: 'landscape',
 };
 
 export const storyIdentityAsset: HomeGalleryAsset = {
-  src: peluqueriaBeauty,
-  alt: 'Profesional de belleza en un entorno contemporáneo.',
-  label: 'Raíces y proyección',
-  title: 'La identidad de Torzan Kairos une tradición estética y mirada internacional.',
-  aspect: 'portrait',
+  src: cuadernoEditorial,
+  alt: 'Cuaderno negro de Torzan Kairos con icono dorado y patrón de marca.',
+  label: 'Identidad',
+  title: 'La identidad visual conecta oficio, lujo sobrio y memoria de marca.',
+  aspect: 'landscape',
 };
 
 export const contactLocationAsset: HomeGalleryAsset = {
-  src: peluqueriaSoft,
-  alt: 'Espacio de atención y experiencia de belleza.',
-  label: 'Atención Torzan Kairos',
-  title: 'Un entorno pensado para acompañar formación, citas y orientación.',
-  aspect: 'portrait',
+  src: fachadaConLogo,
+  alt: 'Fachada de Torzan Kairos con logotipo dorado y base negra.',
+  label: 'Ubicación Torzan Kairos',
+  title: 'Una presencia física clara y reconocible para acompañar atención, reservas y matrícula.',
+  aspect: 'landscape',
 };
 
 export const courseMediaBySlug: Record<
@@ -137,95 +148,95 @@ export const courseMediaBySlug: Record<
   barberia: {
     heroAsset: {
       src: barberiaHero,
-      alt: 'Escena de barbería profesional con toallas y utensilios de trabajo.',
+      alt: 'Servicio y práctica de barbería en un entorno de estética clásica.',
       label: 'Barbería Profesional',
-      title: 'Técnica, precisión y estilo masculino.',
+      title: 'Un programa orientado a corte, precisión y oficio masculino contemporáneo.',
       aspect: 'landscape',
     },
     gallery: [
       {
-        src: barberiaWide,
-        alt: 'Ambiente de barbería profesional.',
-        label: 'Práctica',
-        title: 'Trabajo técnico aplicado al entorno real.',
+        src: fireflyBarberia,
+        alt: 'Retrato editorial de barbería con tijeras en primer plano.',
+        label: 'Detalle',
+        title: 'La precisión técnica y la lectura estética del rostro hacen parte del oficio.',
+        aspect: 'portrait',
+      },
+      {
+        src: herramientasDeTrabajo,
+        alt: 'Herramientas personalizadas de Torzan Kairos sobre superficie clara.',
+        label: 'Herramientas',
+        title: 'El aprendizaje también pasa por materiales, orden técnico y cultura del detalle.',
         aspect: 'landscape',
       },
       {
-        src: barberiaPortrait,
-        alt: 'Detalle visual de barbería.',
-        label: 'Estilo',
-        title: 'Lectura contemporánea del oficio.',
-        aspect: 'portrait',
-      },
-      {
-        src: barberiaEditorial,
-        alt: 'Composición editorial de barbería.',
-        label: 'Oficio',
-        title: 'Formación con identidad y carácter propio.',
-        aspect: 'portrait',
+        src: barberiaHero,
+        alt: 'Cliente recibiendo servicio de barbería con capa institucional de Torzan Kairos.',
+        label: 'Práctica',
+        title: 'La formación conecta inmediatamente con la ejecución en contexto real.',
+        aspect: 'landscape',
       },
     ],
   },
   peluqueria: {
     heroAsset: {
-      src: peluqueriaHero,
-      alt: 'Servicio de peluquería profesional en acción.',
+      src: profesoraYAlumna,
+      alt: 'Profesora guiando a una alumna durante un ejercicio de peluquería.',
       label: 'Peluquería Profesional',
-      title: 'Corte, color y estilismo desde una base técnica sólida.',
-      aspect: 'landscape',
+      title: 'Una ruta académica pensada para dominar técnica, criterio y atención profesional.',
+      aspect: 'portrait',
     },
     gallery: [
       {
-        src: peluqueriaPortrait,
-        alt: 'Profesional trabajando en peluquería.',
-        label: 'Corte',
-        title: 'Detalle técnico y atención personalizada.',
+        src: profesionalesEquipo,
+        alt: 'Equipo de Torzan Kairos en el interior de la academia.',
+        label: 'Academia',
+        title: 'La formación se vive dentro de una marca que cuida presencia, método y entorno.',
         aspect: 'portrait',
       },
       {
-        src: peluqueriaDetail,
-        alt: 'Herramienta de secado en un servicio de peluquería.',
-        label: 'Acabado',
-        title: 'Procesos que cuidan forma, textura y presentación.',
-        aspect: 'portrait',
+        src: espejosPeluqueria,
+        alt: 'Estaciones de trabajo de peluquería con espejos circulares y mobiliario cálido.',
+        label: 'Espacio',
+        title: 'El entorno acompaña la experiencia técnica con una estética más refinada.',
+        aspect: 'landscape',
       },
       {
-        src: peluqueriaCut,
-        alt: 'Corte capilar en ejecución.',
-        label: 'Transformación',
-        title: 'Una formación conectada con la experiencia real del salón.',
+        src: profesoresEquipo,
+        alt: 'Docentes de Torzan Kairos con herramientas de trabajo.',
+        label: 'Equipo docente',
+        title: 'El respaldo humano de la formación también refuerza la propuesta académica.',
         aspect: 'portrait',
       },
     ],
   },
   unas: {
     heroAsset: {
-      src: unasDetail,
-      alt: 'Detalle de uñas con acabado profesional en tono rojo.',
+      src: manicuristaHero,
+      alt: 'Servicio de uñas en salón con profesional atendiendo a una clienta.',
       label: 'Curso Profesional de Uñas',
-      title: 'Técnica, estética y precisión en manos y pies.',
+      title: 'Técnica, estructura y criterio estético aplicados al cuidado profesional de manos y pies.',
       aspect: 'landscape',
     },
     gallery: [
       {
-        src: unasHero,
-        alt: 'Detalle editorial de uñas y manicure.',
-        label: 'Técnica',
-        title: 'Servicios con detalle, acabado y criterio estético.',
-        aspect: 'portrait',
+        src: manicuristaDetalle,
+        alt: 'Detalle de manos durante un servicio de uñas sobre superficie brillante.',
+        label: 'Precisión',
+        title: 'La técnica se expresa en el detalle, la higiene visual y el acabado.',
+        aspect: 'landscape',
       },
       {
-        src: manicureFinish,
-        alt: 'Manicure profesional con acabado brillante.',
-        label: 'Acabado',
-        title: 'Resultados que combinan estructura y creatividad.',
-        aspect: 'portrait',
+        src: papelProtector,
+        alt: 'Aplicación de técnica de uñas sobre superficie con patrón gráfico de la marca.',
+        label: 'Práctica',
+        title: 'La experiencia visual también acompaña el aprendizaje y el servicio.',
+        aspect: 'landscape',
       },
       {
-        src: manicureDecoration,
-        alt: 'Diseño decorativo de uñas.',
-        label: 'Creatividad',
-        title: 'Decoración avanzada como parte de la propuesta formativa.',
+        src: fireflyManicure,
+        alt: 'Detalle editorial de una atención de manicure con esmaltes al costado.',
+        label: 'Cuidado',
+        title: 'Una mirada más limpia y sensorial del universo de cuidado personal.',
         aspect: 'square',
       },
     ],
@@ -238,130 +249,117 @@ export const serviceMediaBySlug: Record<
 > = {
   peluqueria: {
     heroAsset: {
-      src: peluqueriaWide,
-      alt: 'Servicio profesional de peluquería en salón.',
+      src: espejosPeluqueria,
+      alt: 'Estaciones de trabajo de peluquería con espejos circulares y acabados en madera.',
       label: 'Servicios de Peluquería',
-      title: 'Corte, color y cuidado capilar con atención personalizada.',
+      title: 'Corte, transformación y cuidado capilar dentro de una experiencia sobria y profesional.',
       aspect: 'landscape',
     },
     gallery: [
       {
-        src: peluqueriaHero,
-        alt: 'Cliente recibiendo servicio de peluquería.',
-        label: 'Servicio',
-        title: 'Una experiencia cuidada desde el primer gesto.',
+        src: profesionalesEquipo,
+        alt: 'Equipo Torzan Kairos posando en el espacio institucional.',
+        label: 'Atención',
+        title: 'La confianza también nace del entorno, la presencia y el acompañamiento.',
+        aspect: 'portrait',
+      },
+      {
+        src: espejosPeluqueria,
+        alt: 'Detalle de las estaciones de peluquería en el salón.',
+        label: 'Espacio',
+        title: 'El servicio sucede en un ambiente limpio, cálido y visualmente consistente.',
         aspect: 'landscape',
       },
       {
-        src: peluqueriaDetail,
-        alt: 'Detalle técnico de secado profesional.',
-        label: 'Detalle',
-        title: 'Acabados precisos que respetan la intención estética.',
-        aspect: 'portrait',
-      },
-      {
-        src: peluqueriaCut,
-        alt: 'Corte capilar en proceso.',
-        label: 'Transformación',
-        title: 'Resultados que parten de una lectura técnica del cabello.',
-        aspect: 'portrait',
+        src: cartelEnLaCalle,
+        alt: 'Señalética exterior de Torzan Kairos en un soporte urbano.',
+        label: 'Marca',
+        title: 'La experiencia comercial también se apoya en una marca visible y bien presentada.',
+        aspect: 'landscape',
       },
     ],
   },
   unas: {
     heroAsset: {
-      src: manicurePortrait,
-      alt: 'Manicure profesional en un entorno de servicio.',
+      src: manicuristaHero,
+      alt: 'Profesional atendiendo un servicio de uñas en el salón.',
       label: 'Servicios de Uñas',
-      title: 'Cuidado, estructura y diseño para manos y pies.',
-      aspect: 'portrait',
+      title: 'Servicios orientados al cuidado, la estructura y el acabado visual de manos y pies.',
+      aspect: 'landscape',
     },
     gallery: [
       {
-        src: unasDetail,
-        alt: 'Detalle de uñas esmaltadas en rojo.',
+        src: manicuristaDetalle,
+        alt: 'Detalle del trabajo manual durante un servicio de uñas.',
         label: 'Detalle',
-        title: 'Acabados que cuidan color, forma y presentación.',
+        title: 'Una lectura más cercana del servicio desde el gesto, la limpieza y el acabado.',
         aspect: 'landscape',
       },
       {
-        src: manicureFinish,
-        alt: 'Resultado de manicure profesional.',
-        label: 'Servicio',
-        title: 'Técnica aplicada con lectura estética contemporánea.',
-        aspect: 'portrait',
+        src: papelProtector,
+        alt: 'Práctica de uñas sobre superficie con patrón gráfico dorado.',
+        label: 'Proceso',
+        title: 'La técnica se comunica también a través del proceso y el orden visual.',
+        aspect: 'landscape',
       },
       {
-        src: manicureDecoration,
-        alt: 'Diseño decorativo de uñas con acabado artístico.',
-        label: 'Diseño',
-        title: 'Opciones creativas para un servicio más expresivo.',
+        src: fireflyManicure,
+        alt: 'Detalle editorial de una sesión de manicure.',
+        label: 'Ambiente',
+        title: 'El resultado final se apoya en una sensación de cuidado y presentación.',
         aspect: 'square',
       },
     ],
   },
   'cejas-y-depilacion': {
     heroAsset: {
-      src: peluqueriaBeauty,
-      alt: 'Retrato de belleza utilizado para representar cuidado facial.',
+      src: espejosPeluqueria,
+      alt: 'Zona de atención de Torzan Kairos utilizada como recurso visual sobrio para servicios faciales.',
       label: 'Cejas y Depilación',
-      title: 'Definición, cuidado y armonía facial en cada detalle.',
-      aspect: 'portrait',
+      title: 'Mientras llegan assets más específicos, la categoría se apoya en una atmósfera limpia y coherente con la marca.',
+      aspect: 'landscape',
     },
-    gallery: [
-      {
-        src: peluqueriaBeauty,
-        alt: 'Imagen de belleza y cuidado estético.',
-        label: 'Mirada',
-        title: 'Servicios diseñados para realzar expresión y acabado.',
-        aspect: 'portrait',
-      },
-      {
-        src: peluqueriaPortrait,
-        alt: 'Atención personalizada en un espacio de belleza.',
-        label: 'Atención',
-        title: 'Procedimientos realizados con criterio y acompañamiento.',
-        aspect: 'portrait',
-      },
-      {
-        src: peluqueriaSoft,
-        alt: 'Ambiente de cuidado personal y belleza.',
-        label: 'Cuidado',
-        title: 'Experiencias sobrias y bien orientadas al resultado.',
-        aspect: 'landscape',
-      },
-    ],
+    gallery: [],
   },
   'cuidado-personal': {
     heroAsset: {
-      src: manicureDetail,
-      alt: 'Detalle de cuidado estético de manos.',
+      src: fireflyManicure,
+      alt: 'Detalle editorial de un servicio de cuidado personal con productos sobre mesa oscura.',
       label: 'Cuidado Personal',
-      title: 'Bienestar y atención personalizada dentro del universo Torzan Kairos.',
-      aspect: 'portrait',
+      title: 'Una categoría orientada a bienestar, detalle estético y una experiencia más pausada.',
+      aspect: 'square',
     },
-    gallery: [
-      {
-        src: manicurePortrait,
-        alt: 'Cuidado estético en manos.',
-        label: 'Bienestar',
-        title: 'Rituales pensados para cuidar la experiencia completa.',
-        aspect: 'portrait',
-      },
-      {
-        src: peluqueriaSoft,
-        alt: 'Imagen de atención estética en salón.',
-        label: 'Acompañamiento',
-        title: 'Ambientes que invitan a una atención pausada y cercana.',
-        aspect: 'landscape',
-      },
-      {
-        src: manicureDecoration,
-        alt: 'Detalle visual de manicure decorativo.',
-        label: 'Detalle',
-        title: 'Pequeños gestos que elevan la percepción del cuidado.',
-        aspect: 'square',
-      },
-    ],
+    gallery: [],
   },
 };
+
+export const identityAssets: HomeGalleryAsset[] = [
+  {
+    src: tarjetasDePresentacion,
+    alt: 'Tarjetas de presentación de Torzan Kairos sobre escritorio de madera.',
+    label: 'Papelería',
+    title: 'La identidad se extiende a papelería y soportes comerciales con lenguaje premium.',
+    aspect: 'landscape',
+  },
+  {
+    src: certificadoFoto,
+    alt: 'Certificado profesional de Torzan Kairos con borde dorado.',
+    label: 'Certificación',
+    title: 'La promesa de formación también se refleja en piezas institucionales con peso visual.',
+    aspect: 'landscape',
+  },
+  {
+    src: uniformeEditorial,
+    alt: 'Uniforme negro institucional de Torzan Kairos en el salón.',
+    label: 'Uniforme',
+    title: 'La identidad visual también vive en los elementos que acompañan la experiencia diaria.',
+    aspect: 'landscape',
+  },
+  {
+    src: claseDeMaquillaje,
+    alt: 'Clase de maquillaje en desarrollo dentro del aula.',
+    label: 'Comunidad',
+    title: 'La marca se proyecta desde aulas activas, demostraciones y observación guiada.',
+    aspect: 'landscape',
+  },
+];

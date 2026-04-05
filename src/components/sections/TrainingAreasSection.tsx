@@ -17,7 +17,7 @@ export function TrainingAreasSection() {
       <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {trainingAreas.map((area, index) => (
           <Reveal key={area.title} delay={index * 0.06}>
-            <article className="flex h-full flex-col rounded-[2rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+            <article className="flex h-full flex-col rounded-[2rem] border border-white/10 bg-white/5 p-5">
               <PlaceholderMedia
                 accent={area.accent}
                 className="min-h-[240px]"

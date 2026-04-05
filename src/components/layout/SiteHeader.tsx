@@ -33,8 +33,8 @@ export function SiteHeader() {
           className={cn(
             'rounded-[1.9rem] border px-4 py-3 shadow-[0_22px_60px_rgba(0,0,0,0.14)] transition duration-300 sm:px-5',
             isScrolled
-              ? 'border-white/14 bg-[linear-gradient(180deg,rgba(20,47,74,0.9),rgba(13,33,52,0.88))] backdrop-blur-xl'
-              : 'border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))] backdrop-blur-lg',
+              ? 'border-accent-gold/18 bg-[linear-gradient(180deg,rgba(33,33,33,0.96),rgba(22,22,22,0.94))]'
+              : 'border-white/10 bg-[linear-gradient(180deg,rgba(33,33,33,0.88),rgba(27,24,22,0.82))]',
           )}
         >
           <div className="flex items-center justify-between gap-4">
@@ -77,7 +77,7 @@ export function SiteHeader() {
           </div>
 
           {isMenuOpen ? (
-            <nav className="mt-4 rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(20,47,74,0.96),rgba(11,29,46,0.96))] p-4 lg:hidden">
+            <nav className="mt-4 rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(33,33,33,0.98),rgba(20,20,20,0.98))] p-4 lg:hidden">
               <div className="flex flex-col gap-2">
                 {mainNavigation.map((item) => (
                   <NavLink

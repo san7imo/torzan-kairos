@@ -17,7 +17,7 @@ export function StoryPreviewSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="rounded-[2rem] border border-brand-blue/10 bg-brand-blue p-8 text-mist shadow-[0_24px_70px_rgba(20,47,74,0.16)]">
+          <div className="rounded-[2rem] border border-brand-blue/10 bg-brand-blue p-8 text-mist shadow-[0_24px_70px_rgba(33,33,33,0.16)]">
             <p className="text-sm leading-7 text-mist/76">
               La propuesta institucional combina técnica rigurosa, bioseguridad, ética y
               desarrollo del ser para preparar perfiles con criterio profesional y cercanía

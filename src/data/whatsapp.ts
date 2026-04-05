@@ -12,7 +12,7 @@ export const whatsappMessages = {
   contactBooking:
     'Hola, quiero reservar una cita o recibir orientación sobre la oferta actual de Torzan Kairos. ¿Podrían ayudarme?',
   courseInfo: (courseTitle: string) =>
-    `Hola, quiero información sobre ${courseTitle} de Torzan Kairos.`,
+    `Hola, quiero información sobre el curso de ${courseTitle} de Torzan Kairos. Me gustaría conocer horarios, precio y proceso de matrícula.`,
   serviceBooking: (serviceTitle: string) =>
     `Hola, quiero reservar una cita para ${serviceTitle} en Torzan Kairos. ¿Podrían compartirme disponibilidad y confirmar el precio?`,
 };
