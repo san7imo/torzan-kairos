@@ -2,7 +2,11 @@ import type { HomeGalleryAsset } from '../../types/site';
 import { ImagePanel } from './ImagePanel';
 import { Reveal } from '../common/Reveal';
 
-const defaultClasses = ['md:col-span-2 min-h-[320px]', 'min-h-[320px]', 'min-h-[320px]'];
+const defaultClasses = [
+  'md:col-span-2 min-h-[260px] sm:min-h-[320px]',
+  'min-h-[260px] sm:min-h-[320px]',
+  'min-h-[260px] sm:min-h-[320px]',
+];
 
 type MediaGalleryProps = {
   assets: HomeGalleryAsset[];

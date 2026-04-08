@@ -12,6 +12,7 @@ import type {
   StoryEditorialCard,
   StoryInstitutionalCard,
   StoryJourneyPoint,
+  TestimonialItem,
   TrainingArea,
   ValueItem,
 } from '../types/site';
@@ -36,7 +37,7 @@ export const pageMetadata: Record<
     type: 'website',
   },
   story: {
-    title: 'El alma | Torzan Kairos',
+    title: 'Historia | Torzan Kairos',
     description:
       'Conoce la historia de Torzan Kairos, fundada en 2010 por Mariela Torres Zambrano, y su visión de formación integral con proyección internacional.',
     pathname: '/historia',
@@ -76,7 +77,7 @@ export const pageHeroes: Record<'story' | 'courses' | 'services' | 'contact', Pa
     eyebrow: 'El alma de Torzan Kairos',
     title: 'Una historia fundada en 2010 para formar con oficio, sensibilidad y visión internacional.',
     description:
-      'Torzan Kairos nace del camino de Mariela Torres Zambrano y de la unión entre la tradición estética colombiana y una trayectoria consolidada en España.',
+      'Nacimos del camino de Mariela Torres Zambrano y de la unión entre la tradición estética colombiana y una trayectoria consolidada en España.',
     mediaLabel: 'Historia Torzan Kairos',
     mediaTitle: 'Trayectoria, identidad y visión de marca.',
   },
@@ -84,7 +85,7 @@ export const pageHeroes: Record<'story' | 'courses' | 'services' | 'contact', Pa
     eyebrow: 'Formación profesional',
     title: 'Programas creados para convertir talento en técnica, criterio y proyección profesional.',
     description:
-      'Barbería, peluquería profesional y uñas reúnen una propuesta formativa integral con bioseguridad, creatividad y acompañamiento constante.',
+      'Barbería, peluquería profesional y uñas reúnen práctica guiada, módulos completos y orientación directa para matrícula.',
     mediaLabel: 'Cursos Torzan Kairos',
     mediaTitle: 'Programas pensados para aprender haciendo.',
   },
@@ -92,7 +93,7 @@ export const pageHeroes: Record<'story' | 'courses' | 'services' | 'contact', Pa
     eyebrow: 'Servicios de belleza',
     title: 'Una línea de servicios pensada para cuidar la imagen personal con una atención sobria y profesional.',
     description:
-      'Peluquería, uñas, cejas, depilación y cuidado personal comparten una misma mirada estética y una misma atención al detalle.',
+      'Peluquería, uñas, cejas, depilación y cuidado personal comparten precios base visibles, una misma mirada estética y reserva directa por WhatsApp.',
     mediaLabel: 'Servicios Torzan Kairos',
     mediaTitle: 'Experiencias cuidadas desde la técnica y el resultado.',
   },
@@ -100,7 +101,7 @@ export const pageHeroes: Record<'story' | 'courses' | 'services' | 'contact', Pa
     eyebrow: 'Contacto Torzan Kairos',
     title: 'Conversemos sobre formación, servicios, reservas y próximos pasos.',
     description:
-      'La página de contacto reúne los canales principales para orientar matrículas, resolver dudas y coordinar citas.',
+      'Reunimos nuestros canales principales para orientarte en matrículas, resolver dudas y coordinar citas.',
     mediaLabel: 'Contacto Torzan Kairos',
     mediaTitle: 'Canales directos para una atención más ágil.',
   },
@@ -108,17 +109,17 @@ export const pageHeroes: Record<'story' | 'courses' | 'services' | 'contact', Pa
 
 export const mainNavigation: NavItem[] = [
   { label: 'Inicio', href: '/' },
-  { label: 'El alma', href: '/historia' },
+  { label: 'Historia', href: '/historia' },
   { label: 'Cursos', href: '/cursos' },
   { label: 'Servicios', href: '/servicios' },
   { label: 'Contacto', href: '/contacto' },
 ];
 
 export const homeHero: HomeHeroContent = {
-  eyebrow: 'Torzan Kairos',
-  title: 'Formación profesional y servicios de belleza con una identidad sólida y contemporánea.',
+  eyebrow: 'Torzan Kairos Madrid',
+  title: 'La academia de belleza en Madrid para elevar tu técnica y transformar tu futuro.',
   description:
-    'Torzan Kairos reúne academia, experiencia estética y una atención cercana dentro de una marca fundada en 2010 por Mariela Torres Zambrano.',
+    'Impulsamos tu carrera con formación profesional en barbería, peluquería y uñas, y te recibimos con servicios reales de belleza para reservar por WhatsApp.',
   primaryAction: {
     label: 'Ver cursos',
     href: '/cursos',
@@ -128,53 +129,74 @@ export const homeHero: HomeHeroContent = {
     href: '/contacto',
   },
   highlights: [
-    'Fundada en 2010 por Mariela Torres Zambrano',
-    'Raíces colombianas y trayectoria consolidada en España',
-    'Formación integral y atención profesional en un mismo universo',
+    'Barbería, peluquería y uñas con enfoque profesional',
+    'Servicios de belleza con precios claros y reserva por WhatsApp',
+    'Docentes expertos y práctica guiada desde el primer paso',
   ],
 };
 
 export const homeHeroMetrics: MetricItem[] = [
   {
-    value: '2010',
-    label: 'Fundación',
+    value: '16+',
+    label: 'Años formando',
   },
   {
-    value: 'Madrid',
-    label: 'Sede actual',
+    value: '3',
+    label: 'Rutas profesionales',
   },
   {
-    value: '2 líneas',
-    label: 'Academia + servicios',
+    value: 'WhatsApp',
+    label: 'Reserva y matrícula',
   },
 ];
 
 export const homeInstitutionalHighlights = [
-  'Torzan Kairos une formación profesional y servicios de belleza sin perder coherencia de marca.',
-  'La propuesta combina maestría técnica, sensibilidad estética y cercanía humana.',
-  'Cada experiencia se apoya en maestría, creatividad, compromiso y respeto por la profesión.',
+  'Más de 16 años formando en belleza con técnica, disciplina y cercanía.',
+  'Una misma marca reúne academia, servicios reales y atención personalizada.',
+  'Todo el recorrido está pensado para que entiendas rápido qué estudiar, qué reservar y cómo avanzar.',
 ];
 
 export const homeBenefits: FeatureCard[] = [
   {
-    title: 'Formación integral',
+    title: 'Formación práctica real',
     description:
-      'Programas diseñados para desarrollar técnica, criterio estético, bioseguridad y visión profesional.',
+      'Aprendes haciendo, con módulos claros, bioseguridad y acompañamiento profesional desde el inicio.',
   },
   {
-    title: 'Atención cuidada',
+    title: 'Docentes con criterio',
     description:
-      'Servicios pensados para acompañar la imagen personal con detalle, orden visual y cercanía.',
+      'Nuestro equipo guía cada proceso con experiencia técnica, sensibilidad estética y enfoque humano.',
   },
   {
-    title: 'Identidad con trayectoria',
+    title: 'Servicios que respaldan la marca',
     description:
-      'Una marca fundada en 2010 que conecta tradición estética, experiencia internacional y proyección.',
+      'Peluquería, uñas, cejas y cuidado personal amplían la experiencia y refuerzan la confianza del público.',
   },
   {
-    title: 'Contacto directo',
+    title: 'Orientación directa',
     description:
-      'El sitio facilita matrículas, reservas y orientación desde un recorrido claro y sin fricciones innecesarias.',
+      'Resolvemos matrículas, citas y dudas por WhatsApp para que avances sin fricción.',
+  },
+];
+
+export const homeTestimonials: TestimonialItem[] = [
+  {
+    quote:
+      'Aprendí muchísimo y salí con una base más clara para empezar a ofrecer mis primeros servicios con seguridad.',
+    author: 'Estudiante de uñas',
+    context: 'Más confianza para empezar',
+  },
+  {
+    quote:
+      'La barbería dejó de ser solo gusto y se convirtió en un oficio con método, bioseguridad y criterio.',
+    author: 'Estudiante de barbería',
+    context: 'Técnica que se siente profesional',
+  },
+  {
+    quote:
+      'Aquí entendí mejor el color, el corte y la atención al cliente; todo se siente más profesional desde el primer módulo.',
+    author: 'Estudiante de peluquería',
+    context: 'Visión integral del servicio',
   },
 ];
 
@@ -291,13 +313,13 @@ export const storyEditorialCards: StoryEditorialCard[] = [
     eyebrow: 'Origen',
     title: 'Una marca nacida para formar con disciplina, sensibilidad y cercanía humana.',
     description:
-      'Torzan Kairos surge desde una visión clara: enseñar el oficio con seriedad, ética y un profundo respeto por la profesión.',
+      'Nacimos con una visión clara: enseñar el oficio con seriedad, ética y un profundo respeto por la profesión.',
   },
   {
     eyebrow: 'Visión de marca',
     title: 'Academia y servicio como dos expresiones de una misma manera de entender la belleza.',
     description:
-      'La marca une formación profesional y atención al público bajo una identidad coherente, sobria y contemporánea.',
+      'Unimos formación profesional y atención al público bajo una identidad coherente, sobria y contemporánea.',
   },
 ];
 
@@ -306,13 +328,13 @@ export const storyRootsCards: StoryEditorialCard[] = [
     eyebrow: 'Raíces',
     title: 'Tradición estética colombiana',
     description:
-      'La historia de Torzan Kairos conserva cercanía, oficio y valoración genuina del trabajo bien hecho.',
+      'Conservamos cercanía, oficio y una valoración genuina del trabajo bien hecho.',
   },
   {
     eyebrow: 'Proyección',
     title: 'Trayectoria consolidada en España',
     description:
-      'La experiencia desarrollada en España fortalece una mirada actual, amplia y profesional sobre la marca.',
+      'La experiencia desarrollada en España fortalece una mirada actual, amplia y profesional sobre nuestra marca.',
   },
 ];
 
@@ -321,19 +343,19 @@ export const storyInstitutionalCards: StoryInstitutionalCard[] = [
     label: 'Misión',
     title: 'Formar con técnica, bioseguridad, ética y desarrollo del ser.',
     description:
-      'La misión de Torzan Kairos une competencias prácticas, cuidado humano y una lectura responsable del oficio.',
+      'Formamos integrando competencias prácticas, cuidado humano y una lectura responsable del oficio.',
   },
   {
     label: 'Visión',
     title: 'Ser una referencia internacional en formación estética.',
     description:
-      'La visión impulsa una marca reconocida por excelencia, creatividad y proyección profesional.',
+      'Buscamos consolidarnos como una marca reconocida por excelencia, creatividad y proyección profesional.',
   },
   {
     label: 'Objetivos',
     title: 'Desarrollar talento con maestría, compromiso y respeto por la profesión.',
     description:
-      'La academia busca acompañar procesos sólidos, actuales y conectados con la realidad del sector belleza.',
+      'Acompañamos procesos sólidos, actuales y conectados con la realidad del sector belleza.',
   },
 ];
 
@@ -354,6 +376,6 @@ export const storyJourneyPoints: StoryJourneyPoint[] = [
     step: '03',
     title: 'La marca sigue creciendo con una visión integral',
     description:
-      'Cursos, servicios y acompañamiento profesional conviven hoy dentro de una misma experiencia de marca.',
+      'Hoy unimos cursos, servicios y acompañamiento profesional dentro de una misma experiencia de marca.',
   },
 ];

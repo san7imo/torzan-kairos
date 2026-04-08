@@ -21,7 +21,7 @@ export function HybridLocationSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Ubicación y contacto"
-            title="Un mismo punto para orientar matrículas, resolver dudas y acompañar reservas."
+            title="Te esperamos en Madrid para orientarte sobre matrículas, reservas y próximos pasos."
             description="Dirección, canales de atención y acceso directo a WhatsApp conviven en un bloque claro y fácil de recorrer."
           />
 
@@ -42,8 +42,8 @@ export function HybridLocationSection() {
         <Reveal delay={0.12}>
           <ImagePanel
             alt={contactLocationAsset.alt}
-            className="min-h-[460px]"
-            imgClassName="object-cover object-center"
+            className="min-h-[320px] sm:min-h-[460px]"
+            imgClassName="object-cover object-[center_22%]"
             label={contactLocationAsset.label}
             src={contactLocationAsset.src}
             title={contactLocationAsset.title}

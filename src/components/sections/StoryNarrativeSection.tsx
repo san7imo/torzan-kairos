@@ -51,8 +51,8 @@ export function StoryNarrativeSection() {
           <Reveal delay={0.18}>
             <ImagePanel
               alt={storyNarrativeAsset.alt}
-              className="min-h-[320px]"
-              imgClassName="object-cover object-center"
+              className="min-h-[280px] sm:min-h-[320px]"
+              imgClassName="object-cover object-[center_28%]"
               label={storyNarrativeAsset.label}
               src={storyNarrativeAsset.src}
               title={storyNarrativeAsset.title}

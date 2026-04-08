@@ -7,9 +7,20 @@ type ImagePanelProps = {
   title: string;
   className?: string;
   imgClassName?: string;
+  showLabel?: boolean;
+  showTitle?: boolean;
 };
 
-export function ImagePanel({ alt, className, imgClassName, label, src, title }: ImagePanelProps) {
+export function ImagePanel({
+  alt,
+  className,
+  imgClassName,
+  label,
+  showLabel = true,
+  showTitle = true,
+  src,
+  title,
+}: ImagePanelProps) {
   return (
     <div
       className={cn(
@@ -28,17 +39,31 @@ export function ImagePanel({ alt, className, imgClassName, label, src, title }: 
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(33,33,33,0.12),rgba(24,20,17,0.68)_58%,rgba(18,16,14,0.96)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,156,31,0.16),transparent_34%)]" />
-      <div className="relative flex h-full min-h-[260px] flex-col justify-between p-5 sm:p-6">
-        <span className="inline-flex w-fit rounded-full border border-accent-gold/32 bg-accent-gold/10 px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-accent-gold">
-          {label}
-        </span>
-        <div>
-          <div className="mb-4 h-px w-16 bg-mist/18 transition duration-500 group-hover:w-24" aria-hidden="true" />
-          <p className="max-w-sm font-display text-[1.72rem] leading-tight text-mist sm:text-[1.95rem]">
-            {title}
-          </p>
+      {showLabel || showTitle ? (
+        <div
+          className={cn(
+            'relative flex h-full min-h-[260px] flex-col p-5 sm:p-6',
+            showTitle ? 'justify-between' : 'justify-start',
+          )}
+        >
+          {showLabel ? (
+            <span className="inline-flex w-fit rounded-full border border-accent-gold/32 bg-accent-gold/10 px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-accent-gold">
+              {label}
+            </span>
+          ) : null}
+          {showTitle ? (
+            <div>
+              <div
+                aria-hidden="true"
+                className="mb-4 h-px w-16 bg-mist/18 transition duration-500 group-hover:w-24"
+              />
+              <p className="max-w-sm font-display text-[1.55rem] leading-tight text-mist sm:text-[1.9rem]">
+                {title}
+              </p>
+            </div>
+          ) : null}
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }

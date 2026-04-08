@@ -13,7 +13,7 @@ export function HybridServicesSection() {
         <SectionHeading
           eyebrow="Servicios destacados"
           title="La línea de servicios acompaña la marca con una atención cuidada, clara y orientada al detalle."
-          description="Cada categoría presenta enfoque, precios base y acceso directo a reserva desde el mismo lenguaje visual del sitio."
+          description="Cada categoría presenta enfoque, precios base y acceso directo a reserva desde el mismo lenguaje visual de la marca."
         />
 
         <Button className="sm:w-auto" to="/servicios" variant="ghost">

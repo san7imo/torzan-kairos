@@ -15,17 +15,17 @@ export function HybridInstitutionSection() {
         <Reveal className="xl:pr-8">
           <SectionHeading
             eyebrow="Institucional"
-            title="Torzan Kairos presenta una propuesta que une formación, belleza y acompañamiento bajo una misma identidad."
-            description="La marca se construye desde la trayectoria, la técnica y una experiencia humana que cuida tanto al estudiante como al cliente."
+            title="La academia de peluquería, barbería y estética que acompaña talento real en Madrid."
+            description="Formamos futuros profesionales y atendemos al público con la misma exigencia técnica, la misma estética cuidada y la misma cercanía."
           />
 
           <p className="mt-8 max-w-xl text-[0.96rem] leading-8 text-brand-blue/72">
-            La experiencia no se apoya en volumen visual ni en exceso de discurso. Se apoya en oficio,
-            identidad bien presentada y una lectura clara de lo que la marca ofrece hoy.
+            Aquí vienes a aprender, perfeccionar tu técnica o reservar un servicio con claridad. Todo el
+            recorrido está pensado para que entiendas rápido qué hacemos y por qué confiar en nosotros.
           </p>
 
           <Button className="mt-8" to="/historia" variant="ghost">
-            Conocer la historia
+            Conocer nuestra historia
             <ArrowUpRight size={16} />
           </Button>
         </Reveal>
@@ -34,8 +34,8 @@ export function HybridInstitutionSection() {
           <Reveal delay={0.08}>
             <ImagePanel
               alt={storyNarrativeAsset.alt}
-              className="min-h-[350px]"
-              imgClassName="object-cover object-center"
+              className="min-h-[300px] sm:min-h-[350px]"
+              imgClassName="object-cover object-[center_28%]"
               label={storyNarrativeAsset.label}
               src={storyNarrativeAsset.src}
               title={storyNarrativeAsset.title}
@@ -47,7 +47,7 @@ export function HybridInstitutionSection() {
               <ImagePanel
                 alt={storyIdentityAsset.alt}
                 className="min-h-[220px]"
-                imgClassName="object-cover object-center"
+                imgClassName="object-cover object-[center_35%]"
                 label={storyIdentityAsset.label}
                 src={storyIdentityAsset.src}
                 title={storyIdentityAsset.title}

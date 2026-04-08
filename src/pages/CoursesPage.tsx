@@ -58,7 +58,7 @@ export function CoursesPage() {
           <PageIntro
             eyebrow="Oferta académica"
             title="Tres programas pensados para formar oficio, fortalecer criterio y abrir camino profesional."
-            description="Cada ruta reúne contenido académico, módulos organizados y un acceso directo para recibir información de matrícula."
+            description="Cada ruta reúne contenido académico, módulos organizados, una duración definida y un acceso directo para recibir información de matrícula."
           />
 
           <Button className="sm:w-auto" to="/contacto" variant="ghost">

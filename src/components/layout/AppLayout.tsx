@@ -18,7 +18,7 @@ export function AppLayout() {
         <motion.main
           key={location.pathname}
           animate={{ opacity: 1, y: 0 }}
-          className="pt-24 sm:pt-28"
+          className="pt-18 sm:pt-20"
           exit={{ opacity: 0, y: -12 }}
           initial={{ opacity: 0, y: 18 }}
           transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}

@@ -16,24 +16,24 @@ export function FacultySection() {
         <Reveal>
           <SectionHeading
             eyebrow="Equipo docente"
-            title="Un equipo que acompaña el proceso formativo desde la técnica, la cercanía y el respeto por la profesión."
-            description="Presentamos el equipo docente aprobado dentro de una lectura limpia, sobria y enfocada en su papel dentro de la academia."
+            title="Nuestro equipo de docentes acompaña el proceso formativo desde la técnica, la cercanía y el respeto por la profesión."
+            description="Combinamos experiencia técnica, criterio humano y una presencia cuidada para sostener la formación desde dentro."
             invert
           />
 
           <div className="mt-8 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
             <ImagePanel
               alt={facultyAsset.alt}
-              className="min-h-[360px]"
-              imgClassName="object-cover object-center"
+              className="min-h-[280px] sm:min-h-[360px]"
+              imgClassName="object-cover object-top"
               label={facultyAsset.label}
               src={facultyAsset.src}
               title={facultyAsset.title}
             />
             <ImagePanel
               alt={classroomAsset.alt}
-              className="min-h-[360px]"
-              imgClassName="object-cover object-center"
+              className="min-h-[280px] sm:min-h-[360px]"
+              imgClassName="object-cover object-[center_28%]"
               label={classroomAsset.label}
               src={classroomAsset.src}
               title={classroomAsset.title}

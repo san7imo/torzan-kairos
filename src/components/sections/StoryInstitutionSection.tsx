@@ -22,8 +22,8 @@ export function StoryInstitutionSection() {
           <div className="mt-8 grid gap-5">
             <ImagePanel
               alt={certificateAsset.alt}
-              className="min-h-[360px]"
-              imgClassName="object-cover object-center"
+              className="min-h-[280px] sm:min-h-[360px]"
+              imgClassName="object-cover object-[center_28%]"
               label={certificateAsset.label}
               src={certificateAsset.src}
               title={certificateAsset.title}

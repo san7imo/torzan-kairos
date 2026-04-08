@@ -1,6 +1,7 @@
 import espejosPeluqueria from '../assets/images/Espejospeluqueria.webp';
 import fireflyBarberia from '../assets/images/FireflyBarberia.webp';
 import fireflyManicure from '../assets/images/FireflyManicure.webp';
+import fireflyMaquillaje from '../assets/images/Fireflymaquillaje.jpg';
 import barberiaHero from '../assets/images/barberia.webp';
 import cartelEnLaCalle from '../assets/images/cartelenlacalle.webp';
 import certificadoFoto from '../assets/images/certificadofoto.webp';
@@ -26,7 +27,7 @@ export const homeHeroAsset: HomeGalleryAsset = {
   src: fachadaConLogo,
   alt: 'Fachada de Torzan Kairos con logo dorado sobre una base carbón.',
   label: 'Torzan Kairos',
-  title: 'Una marca de formación y belleza con presencia sobria, premium y reconocible.',
+  title: 'Formación profesional y belleza en una misma dirección con presencia clara y reconocible.',
   aspect: 'landscape',
 };
 
@@ -34,7 +35,7 @@ export const homeHeroSideAsset: HomeGalleryAsset = {
   src: profesoraYAlumna,
   alt: 'Profesora guiando a una alumna durante una práctica de peluquería.',
   label: 'Formación real',
-  title: 'Una experiencia académica donde la técnica se transmite con cercanía y criterio.',
+  title: 'La técnica se transmite con cercanía, observación y práctica guiada.',
   aspect: 'portrait',
 };
 
@@ -313,21 +314,21 @@ export const serviceMediaBySlug: Record<
   },
   'cejas-y-depilacion': {
     heroAsset: {
-      src: espejosPeluqueria,
-      alt: 'Zona de atención de Torzan Kairos utilizada como recurso visual sobrio para servicios faciales.',
+      src: claseDeMaquillaje,
+      alt: 'Práctica estética centrada en el rostro dentro de un entorno profesional de belleza.',
       label: 'Cejas y Depilación',
-      title: 'Mientras llegan assets más específicos, la categoría se apoya en una atmósfera limpia y coherente con la marca.',
+      title: 'Una categoría enfocada en precisión facial, armonía y cuidado estético.',
       aspect: 'landscape',
     },
     gallery: [],
   },
   'cuidado-personal': {
     heroAsset: {
-      src: fireflyManicure,
-      alt: 'Detalle editorial de un servicio de cuidado personal con productos sobre mesa oscura.',
+      src: fireflyMaquillaje,
+      alt: 'Primer plano de un tratamiento estético facial en proceso.',
       label: 'Cuidado Personal',
-      title: 'Una categoría orientada a bienestar, detalle estético y una experiencia más pausada.',
-      aspect: 'square',
+      title: 'Una línea orientada al bienestar, el cuidado facial y una atención más pausada.',
+      aspect: 'landscape',
     },
     gallery: [],
   },

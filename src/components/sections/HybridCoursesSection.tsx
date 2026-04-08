@@ -12,13 +12,13 @@ export function HybridCoursesSection() {
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <SectionHeading
           eyebrow="Cursos destacados"
-          title="Programas construidos desde la técnica, la bioseguridad y una visión profesional del oficio."
-          description="Cada programa cuenta con contenido académico estructurado, duración visible y acceso directo a información de matrícula."
+          title="Programas construidos para dominar técnica, criterio y una salida profesional más clara."
+          description="Cada programa cuenta con módulos estructurados, una duración definida y acceso directo a información de matrícula."
           invert
         />
 
         <Button className="sm:w-auto" to="/cursos" variant="secondary">
-          Explorar academia
+          Ver todos los cursos
           <ArrowRight size={16} />
         </Button>
       </div>

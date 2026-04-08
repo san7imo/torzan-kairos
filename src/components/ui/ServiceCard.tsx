@@ -30,44 +30,47 @@ export function ServiceCard({ presentation, service }: ServiceCardProps) {
         className="min-h-[240px]"
         imgClassName="object-cover object-center"
         label={service.shortTitle}
+        showTitle={false}
         src={presentation.heroAsset.src}
         title={service.mediaTitle}
       />
 
-      <div className="mt-6 flex items-start justify-between gap-4">
-        <div>
-          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-accent-gold">
-            Servicio
-          </p>
-          <h3 className="mt-3 font-display text-[1.85rem] leading-tight text-brand-blue">
-            {service.shortTitle}
-          </h3>
+      <div className="mt-6 flex flex-1 flex-col">
+        <div className="flex flex-col gap-4 sm:min-h-[8.7rem] sm:flex-row sm:items-start sm:justify-between">
+          <div className="sm:min-h-[6.2rem] sm:flex-1">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-accent-gold">
+              Servicio
+            </p>
+            <h3 className="mt-3 font-display text-[1.8rem] leading-tight text-brand-blue">
+              {service.shortTitle}
+            </h3>
+          </div>
+
+          <div className="rounded-[1.35rem] border border-brand-blue/10 bg-brand-blue/[0.035] px-4 py-3 text-left sm:min-h-[6.2rem] sm:min-w-[6.8rem] sm:text-right">
+            <p className="text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-brand-blue/44">
+              Desde
+            </p>
+            <p className="mt-2 font-display text-[1.7rem] leading-none text-brand-blue">{startingPrice}</p>
+          </div>
         </div>
 
-        <div className="min-w-[6.8rem] rounded-[1.35rem] border border-brand-blue/10 bg-brand-blue/[0.035] px-4 py-3 text-right">
-          <p className="text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-brand-blue/44">
-            Desde
-          </p>
-          <p className="mt-2 font-display text-[1.7rem] leading-none text-brand-blue">{startingPrice}</p>
+        <p className="mt-4 flex-1 text-sm leading-7 text-brand-blue/72">{service.summary}</p>
+
+        <div className="mt-5 flex min-h-[4rem] flex-wrap gap-2 text-[0.66rem] uppercase tracking-[0.14em] text-brand-blue/46">
+          {service.serviceList.slice(0, 2).map((item) => (
+            <span key={item} className="rounded-full border border-brand-blue/10 px-3 py-2">
+              {item}
+            </span>
+          ))}
         </div>
-      </div>
 
-      <p className="mt-4 text-sm leading-7 text-brand-blue/72">{service.summary}</p>
-
-      <div className="mt-5 flex flex-wrap gap-2 text-[0.66rem] uppercase tracking-[0.14em] text-brand-blue/46">
-        {service.serviceList.slice(0, 2).map((item) => (
-          <span key={item} className="rounded-full border border-brand-blue/10 px-3 py-2">
-            {item}
-          </span>
-        ))}
-      </div>
-
-      <div className="mt-7 flex flex-col gap-3">
-        <WhatsAppCTA className="w-full" label="Reservar por WhatsApp" message={presentation.whatsappMessage} />
-        <Button className="w-full" to={`/servicios/${service.slug}`} variant="ghost">
-          Ver categoría
-          <ArrowRight size={16} />
-        </Button>
+        <div className="mt-7 flex flex-col gap-3">
+          <WhatsAppCTA className="w-full" label="Reservar por WhatsApp" message={presentation.whatsappMessage} />
+          <Button className="w-full" to={`/servicios/${service.slug}`} variant="ghost">
+            Ver categoría
+            <ArrowRight size={16} />
+          </Button>
+        </div>
       </div>
     </Panel>
   );

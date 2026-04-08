@@ -27,29 +27,29 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className={cn('fixed inset-x-0 top-0 z-50 transition duration-300', isScrolled ? 'py-3' : 'py-4 sm:py-5')}>
+    <header className={cn('fixed inset-x-0 top-0 z-50 transition duration-300', isScrolled ? 'py-2.5' : 'py-3 sm:py-3.5')}>
       <Container>
         <div
           className={cn(
-            'rounded-[1.9rem] border px-4 py-3 shadow-[0_22px_60px_rgba(0,0,0,0.14)] transition duration-300 sm:px-5',
+            'rounded-[1.55rem] border px-4 py-2.5 shadow-[0_18px_42px_rgba(0,0,0,0.12)] backdrop-blur-xl transition duration-300 sm:px-5',
             isScrolled
-              ? 'border-accent-gold/18 bg-[linear-gradient(180deg,rgba(33,33,33,0.96),rgba(22,22,22,0.94))]'
-              : 'border-white/10 bg-[linear-gradient(180deg,rgba(33,33,33,0.88),rgba(27,24,22,0.82))]',
+              ? 'border-white/10 bg-[linear-gradient(180deg,rgba(21,21,21,0.94),rgba(21,21,21,0.88))]'
+              : 'border-white/8 bg-[linear-gradient(180deg,rgba(21,21,21,0.72),rgba(21,21,21,0.62))]',
           )}
         >
           <div className="flex items-center justify-between gap-4">
             <NavLink aria-label="Ir al inicio" to="/">
-              <BrandMark withIcon={false} />
+              <BrandMark compact />
             </NavLink>
 
-            <nav className="hidden items-center gap-2 lg:flex">
+            <nav className="hidden items-center gap-1 lg:flex">
               {mainNavigation.map((item) => (
                 <NavLink
                   key={item.href}
                   className={({ isActive }) =>
                     cn(
-                      'rounded-full px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-mist/72 transition duration-300 hover:bg-white/8 hover:text-mist',
-                      isActive && 'bg-white/8 text-accent-gold',
+                      'rounded-full px-3 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-mist/56 transition duration-300 hover:text-mist',
+                      isActive && 'bg-white/[0.05] text-accent-gold',
                     )
                   }
                   to={item.href}
@@ -60,7 +60,7 @@ export function SiteHeader() {
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
-              <Button to="/contacto" variant="primary">
+              <Button className="px-5" to="/contacto" variant="primary">
                 Solicitar información
               </Button>
             </div>
@@ -77,7 +77,7 @@ export function SiteHeader() {
           </div>
 
           {isMenuOpen ? (
-            <nav className="mt-4 rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(33,33,33,0.98),rgba(20,20,20,0.98))] p-4 lg:hidden">
+            <nav className="mt-4 rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(24,24,24,0.98),rgba(18,18,18,0.98))] p-4 lg:hidden">
               <div className="flex flex-col gap-2">
                 {mainNavigation.map((item) => (
                   <NavLink

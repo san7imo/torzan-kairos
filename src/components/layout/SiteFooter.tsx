@@ -15,7 +15,7 @@ export function SiteFooter() {
             <div>
               <BrandMark />
               <p className="mt-6 max-w-md text-sm leading-8 text-mist/70">
-                Formación profesional y servicios de belleza dentro de una misma propuesta de marca, preparados para crecer con contenido real sin rehacer la base visual.
+                Formación profesional y servicios de belleza en Madrid, con una experiencia clara, cercana y orientada a resultados.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export function SiteFooter() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">Contacto editable</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-gold">Contacto</p>
               <div className="mt-5 space-y-4 text-sm text-mist/72">
                 <p className="flex gap-3">
                   <Mail size={16} className="mt-1 shrink-0 text-accent-gold" />
@@ -66,7 +66,7 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-12 border-t border-white/8 pt-6 text-[0.68rem] uppercase tracking-[0.22em] text-mist/40">
-            © {new Date().getFullYear()} Torzan Kairos. Base visual preparada para cursos, servicios, activos reales, datos operativos y despliegue comercial final.
+            © {new Date().getFullYear()} Torzan Kairos. Formación profesional y servicios de belleza.
           </div>
         </div>
       </Container>

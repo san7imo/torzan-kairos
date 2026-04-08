@@ -41,8 +41,8 @@ export function StoryIdentitySection() {
           <Reveal delay={0.1}>
             <ImagePanel
               alt={storyIdentityAsset.alt}
-              className="min-h-[360px]"
-              imgClassName="object-cover object-center"
+              className="min-h-[300px] sm:min-h-[360px]"
+              imgClassName="object-cover object-[center_36%]"
               label={storyIdentityAsset.label}
               src={storyIdentityAsset.src}
               title={storyIdentityAsset.title}

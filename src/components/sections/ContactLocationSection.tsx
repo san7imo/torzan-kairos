@@ -41,8 +41,8 @@ export function ContactLocationSection() {
         <Reveal delay={0.12}>
           <ImagePanel
             alt={contactLocationAsset.alt}
-            className="min-h-[460px]"
-            imgClassName="object-cover object-center"
+            className="min-h-[320px] sm:min-h-[460px]"
+            imgClassName="object-cover object-[center_22%]"
             label={contactLocationContent.mediaLabel}
             src={contactLocationAsset.src}
             title={contactLocationContent.mediaTitle}

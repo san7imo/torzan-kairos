@@ -23,6 +23,12 @@ export type MetricItem = {
   note?: string;
 };
 
+export type TestimonialItem = {
+  quote: string;
+  author: string;
+  context: string;
+};
+
 export type ValueItem = {
   title: string;
   description: string;

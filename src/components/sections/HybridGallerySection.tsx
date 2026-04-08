@@ -1,51 +1,66 @@
-import { experienceAssets, homeGalleryAssets, identityAssets } from '../../data/media';
+import { homeTestimonials } from '../../content/site';
+import { experienceAssets, storyNarrativeAsset } from '../../data/media';
 import { Reveal } from '../common/Reveal';
+import { Button } from '../ui/Button';
 import { ImagePanel } from '../ui/ImagePanel';
+import { Panel } from '../ui/Panel';
 import { Section } from '../ui/Section';
 import { SectionHeading } from '../ui/SectionHeading';
 
 export function HybridGallerySection() {
-  const showcaseAssets = [
-    homeGalleryAssets[0],
-    homeGalleryAssets[1],
-    identityAssets[0],
-    identityAssets[1],
-    experienceAssets[2],
-  ];
+  const [materialsAsset] = experienceAssets;
 
   return (
     <Section tone="light">
-      <SectionHeading
-        eyebrow="Galería"
-        title="Una selección visual que acompaña la identidad de Torzan Kairos con una lectura limpia y editorial."
-        description="Las imágenes reales del proyecto ya se integran en el recorrido para reforzar la presencia de cursos, servicios y experiencia de marca."
-      />
-
-      <div className="mt-14 grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
-        <Reveal delay={0.04}>
-          <ImagePanel
-            alt={showcaseAssets[0].alt}
-            className="min-h-[560px]"
-            imgClassName="object-cover object-center"
-            label={showcaseAssets[0].label}
-            src={showcaseAssets[0].src}
-            title={showcaseAssets[0].title}
+      <div className="grid gap-10 xl:grid-cols-[0.9fr_1.1fr]">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Voces de alumnos"
+            title="La formación también se mide en confianza, claridad y primeros resultados profesionales."
+            description="Estas voces representan el tipo de evolución que buscamos acompañar en cada alumno: más técnica, más seguridad y mejores herramientas para avanzar."
           />
+
+          <div className="mt-8 grid gap-5">
+            <ImagePanel
+              alt={materialsAsset.alt}
+              className="min-h-[320px] sm:min-h-[420px]"
+              imgClassName="object-cover object-center"
+              label="Kit inicial"
+              src={materialsAsset.src}
+              title="Te proporcionamos tus primeros implementos profesionales para empezar con orden y presencia."
+            />
+
+            <Button className="sm:w-auto" to="/cursos" variant="ghost">
+              Conocer los programas
+            </Button>
+          </div>
         </Reveal>
 
-        <div className="grid gap-5 sm:grid-cols-2">
-          {showcaseAssets.slice(1).map((asset, index) => (
-            <Reveal key={asset.title} delay={0.1 + index * 0.06}>
-              <ImagePanel
-                alt={asset.alt}
-                className="min-h-[240px]"
-                imgClassName="object-cover object-center"
-                label={asset.label}
-                src={asset.src}
-                title={asset.title}
-              />
+        <div className="grid gap-5">
+          {homeTestimonials.map((item, index) => (
+            <Reveal key={item.author} delay={index * 0.08}>
+              <Panel className="h-full" padding="md" tone="light">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-accent-gold">
+                  {item.context}
+                </p>
+                <p className="mt-4 text-base leading-8 text-brand-blue/78">“{item.quote}”</p>
+                <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-blue/48">
+                  {item.author}
+                </p>
+              </Panel>
             </Reveal>
           ))}
+
+          <Reveal delay={0.24}>
+            <ImagePanel
+              alt={storyNarrativeAsset.alt}
+              className="min-h-[280px] sm:min-h-[320px]"
+              imgClassName="object-cover object-[center_28%]"
+              label={storyNarrativeAsset.label}
+              src={storyNarrativeAsset.src}
+              title="Cada proceso busca traducirse en confianza, avance y un cierre formativo con peso profesional."
+            />
+          </Reveal>
         </div>
       </div>
     </Section>

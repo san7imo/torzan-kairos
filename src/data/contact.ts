@@ -2,9 +2,9 @@ import type { ContactDetail, ContactFormField, FooterContact } from '../types/si
 import { buildWhatsAppLink, whatsappConfig, whatsappMessages } from './whatsapp';
 
 export const contactPageHighlights = [
-  'Atención para matrículas, reservas y orientación general desde un mismo punto de contacto.',
-  'Canales claros para resolver dudas sobre cursos, servicios y disponibilidad.',
-  'Ubicación y referencia de atención presentadas con una lectura limpia y directa.',
+  'Atendemos matrículas, reservas y orientación general desde un mismo punto de contacto.',
+  'Te damos canales claros para resolver dudas sobre cursos, servicios y disponibilidad.',
+  'Compartimos nuestra ubicación y referencia de atención con una lectura limpia y directa.',
 ];
 
 export const contactQuickDetails: ContactDetail[] = [
@@ -97,13 +97,13 @@ export const footerContact: FooterContact = {
 
 export const contactLocationContent = {
   eyebrow: 'Ubicación',
-  title: 'Torzan Kairos recibe a estudiantes y clientes en un punto de atención claro y fácil de ubicar.',
+  title: 'Te recibimos en Madrid con un punto de atención claro y fácil de ubicar.',
   description:
-    'La página integra referencia de sede, canales de atención y un soporte visual que acompaña la experiencia de contacto.',
+    'Reunimos la referencia de sede, los canales de atención y un apoyo visual que acompaña la experiencia de contacto.',
   referenceLabel: 'Referencia de sede',
   referenceText: 'C/ Embajadores 61, Madrid.',
   scheduleLabel: 'Atención y reservas',
   scheduleText: 'Consulta horarios y disponibilidad actual a través de WhatsApp o teléfono.',
   mediaLabel: 'Atención Torzan Kairos',
-  mediaTitle: 'Espacio de acompañamiento para orientación, reservas y atención personalizada.',
+  mediaTitle: 'Nuestra sede acompaña la orientación, las reservas y una atención personalizada.',
 };
