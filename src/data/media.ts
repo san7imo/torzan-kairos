@@ -21,22 +21,23 @@ import profesoraYAlumna from '../assets/images/profesora y alumna.webp';
 import profesoresEquipo from '../assets/images/profesores.webp';
 import tarjetasDePresentacion from '../assets/images/tarjetas de presentacion.webp';
 import uniformeEditorial from '../assets/images/uniforme.webp';
-import type { CourseSlug, HomeGalleryAsset, ServiceSlug } from '../types/site';
+import type { CourseSlug, HomeGalleryAsset, HomeHeroSlideId, ServiceSlug } from '../types/site';
 
-export const homeHeroAsset: HomeGalleryAsset = {
-  src: fachadaConLogo,
-  alt: 'Fachada de Torzan Kairos con logo dorado sobre una base carbón.',
-  label: 'Torzan Kairos',
-  title: 'Formación profesional y belleza en una misma dirección con presencia clara y reconocible.',
-  aspect: 'landscape',
-};
-
-export const homeHeroSideAsset: HomeGalleryAsset = {
-  src: profesoraYAlumna,
-  alt: 'Profesora guiando a una alumna durante una práctica de peluquería.',
-  label: 'Formación real',
-  title: 'La técnica se transmite con cercanía, observación y práctica guiada.',
-  aspect: 'portrait',
+export const homeHeroSlideAssets: Record<HomeHeroSlideId, HomeGalleryAsset> = {
+  academy: {
+    src: cartelEnLaCalle,
+    alt: 'Cartel exterior de Torzan Kairos visible en la calle como referencia de la academia y sus servicios.',
+    label: 'Academia Torzan Kairos',
+    title: 'La academia se presenta con una identidad visible, reconocible y lista para conectar con nuevos alumnos.',
+    aspect: 'landscape',
+  },
+  services: {
+    src: espejosPeluqueria,
+    alt: 'Zona de servicios de peluquería con espejos y estaciones de trabajo preparadas.',
+    label: 'Servicios Torzan Kairos',
+    title: 'Una experiencia de servicio clara, estética y lista para reservar por WhatsApp.',
+    aspect: 'landscape',
+  },
 };
 
 export const homeGalleryAssets: HomeGalleryAsset[] = [
@@ -115,6 +116,63 @@ export const experienceAssets: HomeGalleryAsset[] = [
     label: 'Cuidado',
     title: 'Los servicios también hacen parte de la experiencia premium y cercana de la marca.',
     aspect: 'square',
+  },
+];
+
+export const homeInstitutionalMedia = {
+  main: {
+    src: claseDeMaquillaje,
+    alt: 'Clase práctica de maquillaje en Torzan Kairos con enfoque formativo y acompañamiento docente.',
+    label: 'Formación práctica',
+    title: 'La formación sucede en un entorno real, técnico y visualmente cuidado.',
+    aspect: 'portrait' as const,
+  },
+  supporting: [
+    {
+      src: entregaDeCertificado,
+      alt: 'Entrega de certificado a estudiante de Torzan Kairos tras culminar su proceso formativo.',
+      label: 'Reconocimiento',
+      title: 'Cada avance busca traducirse en logro, confianza y proyección profesional.',
+      aspect: 'landscape' as const,
+    },
+    {
+      src: certificadoFoto,
+      alt: 'Estudiante posando con su certificado dentro del espacio institucional de Torzan Kairos.',
+      label: 'Trayectoria',
+      title: 'La academia respalda procesos con técnica, disciplina y resultados visibles.',
+      aspect: 'landscape' as const,
+    },
+    {
+      src: cuadernoMesa,
+      alt: 'Cuaderno institucional de Torzan Kairos sobre mesa con acabado editorial.',
+      label: 'Identidad',
+      title: 'La marca también se expresa en el detalle, la presencia y la coherencia visual.',
+      aspect: 'landscape' as const,
+    },
+  ],
+};
+
+export const homeInstitutionalCarouselAssets: HomeGalleryAsset[] = [
+  {
+    src: profesionalesEquipo,
+    alt: 'Equipo de Torzan Kairos posando dentro del espacio institucional.',
+    label: 'Equipo Torzan Kairos',
+    title: 'Una academia respaldada por presencia profesional y atención cuidada.',
+    aspect: 'portrait',
+  },
+  {
+    src: profesoraYAlumna,
+    alt: 'Profesora guiando a una alumna durante una práctica formativa en Torzan Kairos.',
+    label: 'Formación guiada',
+    title: 'La práctica se acompaña de criterio técnico, observación y cercanía.',
+    aspect: 'portrait',
+  },
+  {
+    src: profesoresEquipo,
+    alt: 'Docentes de Torzan Kairos con herramientas profesionales en el espacio académico.',
+    label: 'Claustro experto',
+    title: 'El equipo docente sostiene la trayectoria y la visión internacional de la marca.',
+    aspect: 'portrait',
   },
 ];
 

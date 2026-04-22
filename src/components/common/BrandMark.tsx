@@ -1,13 +1,34 @@
 import { cn } from '../../lib/cn';
 import logoIcon from '../../assets/branding/TK_Logo icono dorado con sombreado.webp';
+import logoNavbar from '../../assets/branding/logonavbar.png';
 
 type BrandMarkProps = {
   className?: string;
   compact?: boolean;
   withIcon?: boolean;
+  variant?: 'default' | 'navbar';
 };
 
-export function BrandMark({ className, compact = false, withIcon = true }: BrandMarkProps) {
+export function BrandMark({
+  className,
+  compact = false,
+  withIcon = true,
+  variant = 'default',
+}: BrandMarkProps) {
+  if (variant === 'navbar') {
+    return (
+      <div className={cn('flex items-center', className)}>
+        <img
+          alt="Torzan Kairos"
+          className="h-8 w-auto object-contain sm:h-9"
+          decoding="async"
+          loading="eager"
+          src={logoNavbar}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={cn('flex items-center', withIcon ? 'gap-3.5' : 'gap-0', className)}>
       {withIcon ? (

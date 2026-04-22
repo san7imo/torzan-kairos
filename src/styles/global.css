@@ -2,10 +2,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-coal: #212121;
+  --color-coal: #171717;
   --color-mist: #e1e2e1;
-  --color-brand-blue: #2a2520;
+  --color-brand-blue: #212121;
   --color-accent-gold: #cc982a;
+  --color-accent-gold-deep: #855b11;
+  --color-accent-gold-soft: #e7bd59;
   --font-display: "DM Serif Display", Georgia, serif;
   --font-sans: "Lora", "Times New Roman", serif;
 }
@@ -25,9 +27,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(231, 189, 89, 0.1), transparent 24%),
-    radial-gradient(circle at 88% 10%, rgba(225, 226, 225, 0.08), transparent 20%),
-    linear-gradient(180deg, #29231f 0%, #211d1a 45%, #171513 100%);
+    radial-gradient(circle at top left, rgba(231, 189, 89, 0.1), transparent 22%),
+    radial-gradient(circle at 88% 8%, rgba(133, 91, 17, 0.14), transparent 18%),
+    linear-gradient(180deg, #262626 0%, #1f1f1f 44%, #171717 100%);
   color: var(--color-mist);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
@@ -41,11 +43,22 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(225, 226, 225, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(225, 226, 225, 0.025) 1px, transparent 1px);
-  background-size: 88px 88px;
-  mask-image: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.55) 35%, transparent 100%);
-  opacity: 0.28;
+    linear-gradient(rgba(225, 226, 225, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(225, 226, 225, 0.02) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.5) 42%, transparent 100%);
+  opacity: 0.22;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(231, 189, 89, 0.06), transparent 18%),
+    radial-gradient(circle at 82% 78%, rgba(133, 91, 17, 0.1), transparent 20%);
   z-index: -1;
 }
 
@@ -60,8 +73,8 @@ body::before {
 }
 
 ::selection {
-  background: rgba(231, 156, 31, 0.28);
-  color: var(--color-mist);
+  background: rgba(204, 152, 42, 0.32);
+  color: var(--color-coal);
 }
 
 a {
@@ -108,9 +121,9 @@ textarea:focus-visible {
   background-image:
     linear-gradient(rgba(225, 226, 225, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(225, 226, 225, 0.04) 1px, transparent 1px);
-  background-size: 72px 72px;
+  background-size: 64px 64px;
   mask-image: linear-gradient(180deg, black 12%, transparent 100%);
-  opacity: 0.12;
+  opacity: 0.1;
 }
 
 .soft-panel {

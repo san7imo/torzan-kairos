@@ -12,9 +12,9 @@ type SectionProps = PropsWithChildren<{
 
 const toneClasses: Record<NonNullable<SectionProps['tone']>, string> = {
   transparent: '',
-  light: 'bg-mist text-brand-blue',
-  deep: 'bg-brand-blue text-mist',
-  dark: 'bg-coal text-mist',
+  light: 'bg-[linear-gradient(180deg,#f0f0ed_0%,#e1e2e1_100%)] text-brand-blue',
+  deep: 'bg-[linear-gradient(180deg,#232323_0%,#171717_100%)] text-mist',
+  dark: 'bg-[linear-gradient(180deg,#1f1f1f_0%,#171717_100%)] text-mist',
 };
 
 export function Section({
@@ -31,12 +31,12 @@ export function Section({
     <section
       id={id}
       className={cn(
-        'relative overflow-hidden py-18 sm:py-22 lg:py-28 xl:py-32',
+        'relative flex min-h-[92svh] items-center overflow-hidden py-10 sm:min-h-[100svh] sm:py-12 lg:py-14 xl:py-16',
         toneClasses[tone],
         className,
       )}
     >
-      {content}
+      <div className="w-full">{content}</div>
     </section>
   );
 }

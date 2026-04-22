@@ -1,7 +1,4 @@
-import { HybridBenefitsSection } from '../components/sections/HybridBenefitsSection';
 import { HybridCoursesSection } from '../components/sections/HybridCoursesSection';
-import { HybridFinalCTASection } from '../components/sections/HybridFinalCTASection';
-import { HybridGallerySection } from '../components/sections/HybridGallerySection';
 import { HybridHeroSection } from '../components/sections/HybridHeroSection';
 import { HybridInstitutionSection } from '../components/sections/HybridInstitutionSection';
 import { HybridLocationSection } from '../components/sections/HybridLocationSection';
@@ -18,10 +15,7 @@ export function HomePage() {
       <HybridInstitutionSection />
       <HybridCoursesSection />
       <HybridServicesSection />
-      <HybridBenefitsSection />
-      <HybridGallerySection />
       <HybridLocationSection />
-      <HybridFinalCTASection />
     </>
   );
 }

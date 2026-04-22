@@ -17,7 +17,7 @@ export function CourseCard({ course, presentation, tone = 'light' }: CourseCardP
     <Panel className="flex h-full flex-col" padding="md" tone={tone}>
       <ImagePanel
         alt={presentation.heroAsset.alt}
-        className="min-h-[250px]"
+        className="min-h-[220px]"
         imgClassName="object-cover object-center"
         label={course.shortTitle}
         showTitle={false}
@@ -25,17 +25,17 @@ export function CourseCard({ course, presentation, tone = 'light' }: CourseCardP
         title={course.mediaTitle}
       />
 
-      <div className="mt-6 flex flex-1 flex-col">
-        <div className="flex flex-col gap-4 sm:min-h-[9.1rem] sm:flex-row sm:items-start sm:justify-between">
-          <div className="sm:min-h-[6.4rem] sm:flex-1">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-accent-gold">
+      <div className="mt-5 flex flex-1 flex-col">
+        <div className="flex flex-col gap-3.5 sm:min-h-[7.8rem] sm:flex-row sm:items-start sm:justify-between">
+          <div className="sm:min-h-[5.5rem] sm:flex-1">
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-accent-gold">
               {course.shortTitle}
             </p>
             <h3
               className={
                 isDark
-                  ? 'mt-3 font-display text-[1.9rem] leading-tight text-mist'
-                  : 'mt-3 font-display text-[1.9rem] leading-tight text-brand-blue'
+                  ? 'mt-2.5 font-display text-[1.55rem] leading-tight text-mist'
+                  : 'mt-2.5 font-display text-[1.55rem] leading-tight text-brand-blue'
               }
             >
               {course.title}
@@ -45,15 +45,15 @@ export function CourseCard({ course, presentation, tone = 'light' }: CourseCardP
           <div
             className={
               isDark
-                ? 'rounded-[1.35rem] border border-white/10 bg-white/[0.04] px-4 py-3 text-left sm:min-h-[6.4rem] sm:min-w-[9.1rem] sm:text-right'
-                : 'rounded-[1.35rem] border border-brand-blue/10 bg-brand-blue/[0.035] px-4 py-3 text-left sm:min-h-[6.4rem] sm:min-w-[9.1rem] sm:text-right'
+                ? 'rounded-[1.15rem] border border-white/8 bg-white/[0.035] px-3.5 py-3 text-left sm:min-h-[5.5rem] sm:min-w-[8rem] sm:text-right'
+                : 'rounded-[1.15rem] border border-brand-blue/10 bg-brand-blue/[0.03] px-3.5 py-3 text-left sm:min-h-[5.5rem] sm:min-w-[8rem] sm:text-right'
             }
           >
             <p
               className={
                 isDark
-                  ? 'text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-mist/48'
-                  : 'text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-brand-blue/44'
+                  ? 'text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-mist/48'
+                  : 'text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-brand-blue/44'
               }
             >
               Duración
@@ -61,8 +61,8 @@ export function CourseCard({ course, presentation, tone = 'light' }: CourseCardP
             <p
               className={
                 isDark
-                  ? 'mt-2 font-display text-[1.15rem] leading-tight text-mist'
-                  : 'mt-2 font-display text-[1.15rem] leading-tight text-brand-blue'
+                  ? 'mt-2 font-display text-[1rem] leading-tight text-mist'
+                  : 'mt-2 font-display text-[1rem] leading-tight text-brand-blue'
               }
             >
               {presentation.durationLabel}
@@ -73,8 +73,8 @@ export function CourseCard({ course, presentation, tone = 'light' }: CourseCardP
         <p
           className={
             isDark
-              ? 'mt-4 flex-1 text-sm leading-7 text-mist/72'
-              : 'mt-4 flex-1 text-sm leading-7 text-brand-blue/72'
+              ? 'mt-3.5 flex-1 text-[0.84rem] leading-6.5 text-mist/72'
+              : 'mt-3.5 flex-1 text-[0.84rem] leading-6.5 text-brand-blue/72'
           }
         >
           {course.summary}
@@ -83,23 +83,23 @@ export function CourseCard({ course, presentation, tone = 'light' }: CourseCardP
         <div
           className={
             isDark
-              ? 'mt-6 flex min-h-[4.1rem] flex-wrap gap-2 text-[0.68rem] uppercase tracking-[0.16em] text-mist/46'
-              : 'mt-6 flex min-h-[4.1rem] flex-wrap gap-2 text-[0.68rem] uppercase tracking-[0.16em] text-brand-blue/46'
+              ? 'mt-5 flex min-h-[3.2rem] flex-wrap gap-2 text-[0.58rem] uppercase tracking-[0.14em] text-mist/46'
+              : 'mt-5 flex min-h-[3.2rem] flex-wrap gap-2 text-[0.58rem] uppercase tracking-[0.14em] text-brand-blue/46'
           }
         >
-          <span className={isDark ? 'rounded-full border border-white/10 px-3 py-2' : 'rounded-full border border-brand-blue/10 px-3 py-2'}>
+          <span className={isDark ? 'rounded-full border border-white/10 px-2.5 py-1.5' : 'rounded-full border border-brand-blue/10 px-2.5 py-1.5'}>
             Módulos completos
           </span>
-          <span className={isDark ? 'rounded-full border border-white/10 px-3 py-2' : 'rounded-full border border-brand-blue/10 px-3 py-2'}>
+          <span className={isDark ? 'rounded-full border border-white/10 px-2.5 py-1.5' : 'rounded-full border border-brand-blue/10 px-2.5 py-1.5'}>
             Práctica guiada
           </span>
-          <span className={isDark ? 'rounded-full border border-white/10 px-3 py-2' : 'rounded-full border border-brand-blue/10 px-3 py-2'}>
+          <span className={isDark ? 'rounded-full border border-white/10 px-2.5 py-1.5' : 'rounded-full border border-brand-blue/10 px-2.5 py-1.5'}>
             WhatsApp activo
           </span>
         </div>
 
         <Button
-          className="mt-8 w-full sm:w-auto"
+          className="mt-6 w-full sm:w-auto"
           to={`/cursos/${course.slug}`}
           variant={isDark ? 'secondary' : 'ghost'}
         >

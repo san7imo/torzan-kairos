@@ -134,6 +134,13 @@ export type LinkAction = {
   href: string;
 };
 
+export type HeroAction = {
+  label: string;
+  href?: string;
+  kind: 'link' | 'whatsapp';
+  message?: string;
+};
+
 export type HomeHeroContent = {
   eyebrow: string;
   title: string;
@@ -141,6 +148,31 @@ export type HomeHeroContent = {
   primaryAction: LinkAction;
   secondaryAction: LinkAction;
   highlights: string[];
+};
+
+export type HomeHeroSlideId = 'academy' | 'services';
+
+export type HomeHeroServiceSpotlight = {
+  label: string;
+  priceLabel: string;
+  note: string;
+};
+
+export type HomeHeroSlide = {
+  id: HomeHeroSlideId;
+  variant: 'academy' | 'services';
+  eyebrow: string;
+  title: string;
+  description: string;
+  primaryAction: HeroAction;
+  secondaryAction: HeroAction;
+  highlights: string[];
+  metrics?: MetricItem[];
+  services?: HomeHeroServiceSpotlight[];
+  imagePosition: 'left' | 'right';
+  imageEyebrow: string;
+  imageTitle: string;
+  imageActionLabel?: string;
 };
 
 export type HomeGalleryAsset = {

@@ -16,15 +16,15 @@ type ButtonProps = BaseButtonProps &
 
 const variants = {
   primary:
-    'border border-accent-gold/60 bg-accent-gold text-brand-blue shadow-[0_18px_44px_rgba(231,156,31,0.2)] hover:-translate-y-0.5 hover:border-accent-gold/80 hover:bg-[#efab33] hover:shadow-[0_24px_60px_rgba(231,156,31,0.24)]',
+    'border border-accent-gold/70 bg-accent-gold text-coal shadow-[0_14px_30px_rgba(133,91,17,0.18)] hover:-translate-y-0.5 hover:border-[#e7bd59] hover:bg-[#d7a33a] hover:shadow-[0_18px_38px_rgba(133,91,17,0.22)]',
   secondary:
-    'border border-mist/18 bg-white/8 text-mist shadow-[0_12px_34px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 hover:border-accent-gold/42 hover:bg-white/12',
+    'border border-mist/14 bg-white/6 text-mist shadow-[0_10px_24px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 hover:border-accent-gold/40 hover:bg-white/10',
   ghost:
-    'border border-brand-blue/12 bg-white text-brand-blue shadow-[0_10px_28px_rgba(33,33,33,0.06)] hover:-translate-y-0.5 hover:border-accent-gold/50 hover:text-brand-blue hover:shadow-[0_18px_40px_rgba(33,33,33,0.1)]',
+    'border border-brand-blue/10 bg-[#f4f3ef] text-brand-blue shadow-[0_10px_24px_rgba(33,33,33,0.06)] hover:-translate-y-0.5 hover:border-accent-gold/45 hover:text-brand-blue hover:shadow-[0_14px_30px_rgba(33,33,33,0.1)]',
 };
 
 const baseClassName =
-  'inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-[0.74rem] font-semibold uppercase tracking-[0.14em] transition duration-300 ease-out';
+  'inline-flex min-h-10 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[0.66rem] font-semibold uppercase tracking-[0.12em] transition duration-300 ease-out';
 
 export function Button({
   children,

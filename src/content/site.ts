@@ -3,8 +3,7 @@ import type {
   ExperiencePoint,
   FeatureCard,
   FacultyMember,
-  HomeHeroContent,
-  MetricItem,
+  HomeHeroSlide,
   MediaTile,
   NavItem,
   PageHeroContent,
@@ -115,45 +114,118 @@ export const mainNavigation: NavItem[] = [
   { label: 'Contacto', href: '/contacto' },
 ];
 
-export const homeHero: HomeHeroContent = {
-  eyebrow: 'Torzan Kairos Madrid',
-  title: 'La academia de belleza en Madrid para elevar tu técnica y transformar tu futuro.',
-  description:
-    'Impulsamos tu carrera con formación profesional en barbería, peluquería y uñas, y te recibimos con servicios reales de belleza para reservar por WhatsApp.',
-  primaryAction: {
-    label: 'Ver cursos',
-    href: '/cursos',
-  },
-  secondaryAction: {
-    label: 'Reservar cita',
-    href: '/contacto',
-  },
-  highlights: [
-    'Barbería, peluquería y uñas con enfoque profesional',
-    'Servicios de belleza con precios claros y reserva por WhatsApp',
-    'Docentes expertos y práctica guiada desde el primer paso',
-  ],
-};
-
-export const homeHeroMetrics: MetricItem[] = [
+export const homeHeroSlides: HomeHeroSlide[] = [
   {
-    value: '16+',
-    label: 'Años formando',
+    id: 'academy',
+    variant: 'academy',
+    eyebrow: 'Academia profesional',
+    title: 'Impulsa tu futuro en el mundo de la belleza profesional.',
+    description:
+      'Descubre programas formativos diseñados para ayudarte a desarrollar habilidades reales, fortalecer tu técnica y avanzar con seguridad hacia una salida profesional.',
+    primaryAction: {
+      label: 'Ver cursos',
+      href: '/cursos',
+      kind: 'link',
+    },
+    secondaryAction: {
+      label: 'Solicitar información',
+      kind: 'whatsapp',
+      message: 'Hola, quiero información sobre los cursos de Torzan Kairos. Me gustaría conocer horarios, precio y proceso de matrícula.',
+    },
+    highlights: [
+      'Cursos listos para iniciar tu carrera en belleza.',
+      'Práctica guiada, bioseguridad y acompañamiento experto.',
+      'Información de matrícula rápida y directa por WhatsApp.',
+    ],
+    metrics: [
+      {
+        value: '16+',
+        label: 'Años formando',
+      },
+      {
+        value: '3',
+        label: 'Rutas profesionales',
+      },
+      {
+        value: 'Madrid',
+        label: 'Base de atención',
+      },
+    ],
+    imagePosition: 'right',
+    imageEyebrow: 'Academia Torzan Kairos',
+    imageTitle: 'Empieza a formarte con una propuesta académica clara, práctica y enfocada en salida profesional.',
+    imageActionLabel: 'Explorar formación',
   },
   {
-    value: '3',
-    label: 'Rutas profesionales',
-  },
-  {
-    value: 'WhatsApp',
-    label: 'Reserva y matrícula',
+    id: 'services',
+    variant: 'services',
+    eyebrow: 'Servicios Torzan Kairos',
+    title: 'Tu momento de belleza y bienestar comienza aquí.',
+    description:
+      'Disfruta de una propuesta de belleza integral pensada para ayudarte a sentirte bien, verte mejor y reservar tu cita de forma sencilla.',
+    primaryAction: {
+      label: 'Ver servicios',
+      href: '/servicios',
+      kind: 'link',
+    },
+    secondaryAction: {
+      label: 'Reservar por WhatsApp',
+      kind: 'whatsapp',
+      message:
+        'Hola, quiero reservar una cita para los servicios de Torzan Kairos. ¿Podrían compartirme disponibilidad y confirmar el precio?',
+    },
+    highlights: [
+      'Servicios de belleza pensados para reservar sin complicaciones.',
+      'Precios de referencia claros y atención personalizada.',
+      'Confirmación rápida por WhatsApp.',
+    ],
+    metrics: [
+      {
+        value: '4',
+        label: 'Categorías',
+      },
+      {
+        value: 'Desde 3€',
+        label: 'Precios visibles',
+      },
+      {
+        value: 'WhatsApp',
+        label: 'Reserva directa',
+      },
+    ],
+    services: [
+      {
+        label: 'Peluquería',
+        priceLabel: 'desde 7€',
+        note: 'Corte, lavado, peinado, color y tratamientos.',
+      },
+      {
+        label: 'Uñas',
+        priceLabel: 'desde 7€',
+        note: 'Manicura, pedicura y sistemas en gel o acrílico.',
+      },
+      {
+        label: 'Cejas y depilación',
+        priceLabel: 'desde 3€',
+        note: 'Hilo, cera, sombreado y pestañas por grupo.',
+      },
+      {
+        label: 'Cuidado personal',
+        priceLabel: 'desde 5€',
+        note: 'Limpieza facial y tratamientos relajantes o drenantes.',
+      },
+    ],
+    imagePosition: 'left',
+    imageEyebrow: 'Reserva y atención',
+    imageTitle: 'Todo está preparado para que elijas tu servicio y reserves en pocos pasos.',
+    imageActionLabel: 'Consultar disponibilidad',
   },
 ];
 
 export const homeInstitutionalHighlights = [
-  'Más de 16 años formando en belleza con técnica, disciplina y cercanía.',
-  'Una misma marca reúne academia, servicios reales y atención personalizada.',
-  'Todo el recorrido está pensado para que entiendas rápido qué estudiar, qué reservar y cómo avanzar.',
+  'Más de 16 años de trayectoria en formación y belleza profesional.',
+  'Una propuesta integral que une aprendizaje, práctica y atención personalizada.',
+  'Un espacio creado para crecer con confianza y proyectarse con excelencia.',
 ];
 
 export const homeBenefits: FeatureCard[] = [
@@ -200,7 +272,7 @@ export const homeTestimonials: TestimonialItem[] = [
   },
 ];
 
-export const heroHighlights = homeHero.highlights;
+export const heroHighlights = homeHeroSlides[0]?.highlights ?? [];
 
 export const trainingAreas: TrainingArea[] = [
   {
